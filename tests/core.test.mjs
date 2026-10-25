@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {parseRange,shuffle,makeSession,isCorrect,grade,validSession} from '../core.js';
+const qs=JSON.parse(fs.readFileSync(new URL('../questions.json',import.meta.url)));
+const config={range:'',count:'',minutes:'0',shuffleQuestions:false,shuffleOptions:false};
+test('all 88 records include complete bilingual fields and answer mappings',()=>{
+ assert.equal(qs.length,88);qs.forEach((q,i)=>{assert.equal(q.id,i+1);assert.ok(q.en&&q.zh);assert.equal(q.options.length,4);q.options.forEach(o=>assert.ok(o.en&&o.zh));q.answers.forEach(a=>assert.ok(q.options.some(o=>o.id===a)));});
+});
+test('range parser handles unions, duplicates and Chinese punctuation',()=>assert.deepEqual(parseRange('2，5,8～10,2',qs),[2,5,8,9,10]));
+test('invalid ranges and absent questions rejected',()=>{for(const r of ['0','89','7-3','1-999999','foo','1,','-2'])assert.throws(()=>parseRange(r,qs));});
+test('original exam preserves order',()=>{const s=makeSession(qs,config,100);assert.deepEqual(s.items.map(i=>i.id),qs.map(q=>q.id));assert.deepEqual(s.items[1].options,['A','B','C','D']);assert.equal(s.deadline,null);});
+test('random sampling is unique and subset of selected range',()=>{const s=makeSession(qs,{...config,range:'2-10',count:'5',shuffleQuestions:true});assert.equal(s.items.length,5);assert.equal(new Set(s.items.map(i=>i.id)).size,5);s.items.forEach(i=>assert.ok(i.id>=2&&i.id<=10));});
+test('shuffled choices grade by identity, never displayed letter',()=>{const s=makeSession(qs,{...config,range:'2',shuffleOptions:true},100,()=>0);assert.notEqual(s.items[0].options.indexOf('D'),3);s.answers[2]=['D'];assert.equal(grade(s,qs).score,100);s.answers[2]=['C'];assert.equal(grade(s,qs).score,0);});
+test('dependent option order stays fixed',()=>{const s=makeSession(qs,{...config,range:'78',shuffleOptions:true},100,()=>0);assert.deepEqual(s.items[0].options,['A','B','C','D']);});
+test('randomization does not mutate source bank',()=>{const before=JSON.stringify(qs);makeSession(qs,{...config,shuffleOptions:true,shuffleQuestions:true});assert.equal(JSON.stringify(qs),before);assert.deepEqual(shuffle([1,2,3],()=>0),[2,3,1]);});
+test('grade distinguishes wrong and unanswered',()=>{const s=makeSession(qs,{...config,range:'1-3'});s.answers={1:['D'],2:['A']};assert.deepEqual(grade(s,qs),{total:3,correct:1,unanswered:1,wrong:1,score:33});});
+test('multiple choice requires exact answer set',()=>{const q={answers:['A','C']};assert.ok(isCorrect(q,['C','A']));assert.ok(!isCorrect(q,['A']));assert.ok(!isCorrect(q,['A','B','C']));});
+test('timer uses absolute deadline across JSON reload',()=>{const s=makeSession(qs,{...config,minutes:'10'},1000);assert.equal(s.deadline,601000);const copy=JSON.parse(JSON.stringify(s));assert.ok(validSession(copy,qs));assert.deepEqual(copy,s);});
+test('bad count and duration rejected',()=>{for(const count of ['0','89','1.5','-1'])assert.throws(()=>makeSession(qs,{...config,count}));for(const minutes of ['-1','0.5','1441','foo'])assert.throws(()=>makeSession(qs,{...config,minutes}));});
+test('corrupted persisted state rejected',()=>{const s=makeSession(qs,config);assert.ok(!validSession({...s,version:'old'},qs));assert.ok(!validSession({...s,index:999},qs));const broken=structuredClone(s);broken.items[0].options=['A','A','B','C'];assert.ok(!validSession(broken,qs));});

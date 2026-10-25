@@ -1,0 +1,2818 @@
+[
+  {
+    "id": 1,
+    "en": "Daniel is a professional hacker whose aim is to attack a system to steal data and money for profit. He performs hacking to obtain confidential data such as social security numbers, personally identifiable information (PII) of an employee, and credit card information. After obtaining confidential data, he further sells the information on the black market to make money. Daniel comes under which of the following types of threat actor.",
+    "options": [
+      {
+        "id": "A",
+        "en": "Industrial spies",
+        "zh": "工業間諜"
+      },
+      {
+        "id": "B",
+        "en": "State-sponsored hackers",
+        "zh": "國家支持的駭客"
+      },
+      {
+        "id": "C",
+        "en": "Insider threat",
+        "zh": "內部威脅"
+      },
+      {
+        "id": "D",
+        "en": "Organized hackers",
+        "zh": "組織型駭客"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Daniel 是一名專業駭客，目的是攻擊系統、竊取資料與金錢以獲利。他透過入侵取得社會安全號碼、員工個人識別資訊（PII）及信用卡資料等機密資訊，再將資料賣到黑市牟利。Daniel 屬於下列哪一類威脅行為者？"
+  },
+  {
+    "id": 2,
+    "en": "An attacker instructs bots to use camouflage mechanism to hide his phishing and malware delivery locations in the rapidly changing network of compromised bots. In this particular technique, a single domain name consists of multiple IP addresses. Which of the following technique is used by the attacker?",
+    "options": [
+      {
+        "id": "A",
+        "en": "DNS zone transfer",
+        "zh": "DNS 區域傳送"
+      },
+      {
+        "id": "B",
+        "en": "Dynamic DNS",
+        "zh": "動態 DNS"
+      },
+      {
+        "id": "C",
+        "en": "DNS interrogation",
+        "zh": "DNS 查詢探測"
+      },
+      {
+        "id": "D",
+        "en": "Fast-Flux DNS",
+        "zh": "Fast-Flux DNS（快速變換 DNS）"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "攻擊者指示殭屍程式使用偽裝機制，在快速變動的受感染主機網路中隱藏釣魚網站與惡意程式散布位置。在此技術中，同一網域名稱對應多個 IP 位址。攻擊者使用哪一種技術？"
+  },
+  {
+    "id": 3,
+    "en": "Kathy wants to ensure that she shares threat intelligence containing sensitive information with the appropriate audience. Hence, she used traffic light protocol (TLP). Which TLP color would you signify that information should be shared only within a particular community?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Red",
+        "zh": "紅色"
+      },
+      {
+        "id": "B",
+        "en": "White",
+        "zh": "白色"
+      },
+      {
+        "id": "C",
+        "en": "Green",
+        "zh": "綠色"
+      },
+      {
+        "id": "D",
+        "en": "Amber",
+        "zh": "琥珀色"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Kathy 希望將含有敏感資訊的威脅情資分享給適當的對象，因此使用交通燈協定（TLP）。哪一種 TLP 顏色表示資訊僅應在特定社群內分享？"
+  },
+  {
+    "id": 4,
+    "en": "Moses, a threat intelligence analyst at InfoTec Inc., wants to find crucial information about the potential threats the organization is facing by using advanced Google search operators. He wants to identify whether any fake websites are hosted at the similar to the organization’s URL. Which of the following Google search queries should Moses use?",
+    "options": [
+      {
+        "id": "A",
+        "en": "related: www.infothech.org",
+        "zh": "related: www.infothech.org（相關網站）"
+      },
+      {
+        "id": "B",
+        "en": "info: www.infothech.org",
+        "zh": "info: www.infothech.org（網站資訊）"
+      },
+      {
+        "id": "C",
+        "en": "link: www.infothech.org",
+        "zh": "link: www.infothech.org（連入連結）"
+      },
+      {
+        "id": "D",
+        "en": "cache: www.infothech.org",
+        "zh": "cache: www.infothech.org（快取頁面）"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "原題使用特定搜尋服務的運算子；實際功能及題意適用性待核對。",
+    "lockOptions": false,
+    "zh": "InfoTec 公司的威脅情資分析師 Moses 想透過進階 Google 搜尋運算子，尋找組織可能面臨威脅的重要資訊。他想確認是否有與組織網址相似的假網站。應使用下列哪一個 Google 搜尋查詢？"
+  },
+  {
+    "id": 5,
+    "en": "A team of threat intelligence analysts is performing threat analysis on malware, and each of them has come up with their own theory and evidence to support their theory on a given malware. Now, to identify the most consistent theory out of all the theories, which of the following analytic processes must threat intelligence manager use?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Threat modelling",
+        "zh": "威脅建模"
+      },
+      {
+        "id": "B",
+        "en": "Application decomposition and analysis (ADA)",
+        "zh": "應用程式分解與分析（ADA）"
+      },
+      {
+        "id": "C",
+        "en": "Analysis of competing hypotheses (ACH)",
+        "zh": "競爭假設分析（ACH）"
+      },
+      {
+        "id": "D",
+        "en": "Automated technical analysis",
+        "zh": "自動化技術分析"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "一組威脅情資分析師正在分析惡意程式，每位分析師都提出自己的理論與支持證據。為了從所有理論中找出最符合證據的一個，威脅情資主管應採用哪一種分析流程？"
+  },
+  {
+    "id": 6,
+    "en": "Miley, an analyst, wants to reduce the amount of collected data and make the storing and sharing process easy. She uses filtering, tagging, and queuing technique to sort out the relevant and structured data from the large amounts of unstructured data. Which of the following techniques was employed by Miley?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Sandboxing",
+        "zh": "沙箱分析"
+      },
+      {
+        "id": "B",
+        "en": "Normalization",
+        "zh": "正規化"
+      },
+      {
+        "id": "C",
+        "en": "Data visualization",
+        "zh": "資料視覺化"
+      },
+      {
+        "id": "D",
+        "en": "Convenience sampling",
+        "zh": "便利抽樣"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "分析師 Miley 想減少蒐集的資料量，讓儲存與分享更容易。她使用篩選、標籤與佇列技術，從大量非結構化資料中整理出相關且結構化的資料。她使用了哪一種技術？"
+  },
+  {
+    "id": 7,
+    "en": "Bob, a threat analyst, works in an organization named TechTop. He was asked to collect intelligence to fulfil the needs and requirements of the Red Tam present within the organization. Which of the following are the needs of a RedTeam?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Intelligence related to increased attacks targeting a particular software or operating system vulnerability",
+        "zh": "針對特定軟體或作業系統漏洞的攻擊增加情形"
+      },
+      {
+        "id": "B",
+        "en": "Intelligence on latest vulnerabilities, threat actors, and their tactics, techniques, and procedures (TTPs)",
+        "zh": "最新漏洞、威脅行為者及其戰術、技術與程序（TTPs）"
+      },
+      {
+        "id": "C",
+        "en": "Intelligence extracted latest attacks analysis on similar organizations, which includes details about latest threats and TTPs",
+        "zh": "分析相似組織近期遭受的攻擊所得情資，包含最新威脅及 TTPs"
+      },
+      {
+        "id": "D",
+        "en": "Intelligence that reveals risks related to various strategic business decisions",
+        "zh": "各種策略性業務決策相關風險的情資"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "TechTop 組織的威脅分析師 Bob 被要求蒐集情資，以滿足組織內紅隊的需求。下列何者屬於紅隊所需的情資？"
+  },
+  {
+    "id": 8,
+    "en": "Michael, a threat analyst, works in an organization named TechTop, was asked to conduct a cyber-threat intelligence analysis. After obtaining information regarding threats, he has started analyzing the information and understanding the nature of the threats. What stage of the cyber-threat intelligence is Michael currently in?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Unknown unknowns",
+        "zh": "未知的未知"
+      },
+      {
+        "id": "B",
+        "en": "Unknowns unknown",
+        "zh": "未知事項未知（依原文）"
+      },
+      {
+        "id": "C",
+        "en": "Known unknowns",
+        "zh": "已知的未知"
+      },
+      {
+        "id": "D",
+        "en": "Known knowns",
+        "zh": "已知的已知"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "原始選項 A、B 的英文用詞相近且 B 語意不明；保留原文與答案，待核對。",
+    "lockOptions": false,
+    "zh": "TechTop 的威脅分析師 Michael 被要求執行網路威脅情資分析。取得威脅相關資訊後，他開始分析資訊並了解威脅性質。目前處於網路威脅情資的哪一種狀態？"
+  },
+  {
+    "id": 9,
+    "en": "Enrage Tech Company hired Enrique, a security analyst, for performing threat intelligence analysis. While performing data collection process, he used a counterintelligence mechanism where a recursive DNS server is employed to perform interserver DNS communication and when a request is generated from any name server to the recursive DNS server, the recursive DNS servers log the responses that are received. Then it replicates the logged data and stores the data in the central database. Using these logs, he analyzed the malicious attempts that took place over DNS infrastructure. Which of the following cyber counterintelligence (CCI) gathering technique has Enrique used for data collection?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Data collection through passive DNS monitoring",
+        "zh": "透過被動 DNS 監控蒐集資料"
+      },
+      {
+        "id": "B",
+        "en": "Data collection through DNS interrogation",
+        "zh": "透過 DNS 查詢探測蒐集資料"
+      },
+      {
+        "id": "C",
+        "en": "Data collection through DNS zone transfer",
+        "zh": "透過 DNS 區域傳送蒐集資料"
+      },
+      {
+        "id": "D",
+        "en": "Data collection through dynamic DNS (DDNS)",
+        "zh": "透過動態 DNS（DDNS）蒐集資料"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Enrage Tech 聘請資安分析師 Enrique 執行威脅情資分析。蒐集資料時，他使用一種反情報機制：由遞迴 DNS 伺服器進行伺服器間的 DNS 通訊，當任一名稱伺服器向它發出請求時，記錄收到的回應，再複製紀錄並集中儲存於資料庫。他利用這些紀錄分析 DNS 基礎設施上的惡意活動。這是哪一種網路反情報（CCI）蒐集技術？"
+  },
+  {
+    "id": 10,
+    "en": "John, a professional hacker, is trying to perform APT attack on the target organization network. He gains access to a single system of a target organization and tries to obtain administrative login credentials to gain further access to the systems in the network using various techniques. What phase of the advanced persistent threat lifecycle is John currently in?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Initial intrusion",
+        "zh": "初始入侵"
+      },
+      {
+        "id": "B",
+        "en": "Search and exfiltration",
+        "zh": "搜尋與資料外洩"
+      },
+      {
+        "id": "C",
+        "en": "Expansion",
+        "zh": "擴展"
+      },
+      {
+        "id": "D",
+        "en": "Persistence",
+        "zh": "持續駐留"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "專業駭客 John 正對目標組織網路進行 APT 攻擊。他已取得其中一台系統的存取權，接著利用各種技術取得管理員登入憑證，以進一步存取網路中的其他系統。目前處於進階持續性威脅生命週期的哪個階段？"
+  },
+  {
+    "id": 11,
+    "en": "Jim works as a security analyst in a large multinational company. Recently, a group of hackers penetrated into their organizational network and used a data staging technique to collect sensitive data. They collected all sorts of sensitive data about the employees and customers, business tactics of the organization, financial information, network infrastructure information and so on. What should Jim do to detect the data staging before the hackers exfiltrate from the network?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Jim should identify the attack at an initial stage by checking the content of the user agent field.",
+        "zh": "檢查 User-Agent 欄位內容，以在初始階段識別攻擊"
+      },
+      {
+        "id": "B",
+        "en": "Jim should analyze malicious DNS requests, DNS payload, unspecified domains, and destination of DNS requests.",
+        "zh": "分析惡意 DNS 請求、DNS 酬載、不明網域及 DNS 請求目的地"
+      },
+      {
+        "id": "C",
+        "en": "Jim should monitor network traffic for malicious file transfers, file integrity monitoring, and event logs.",
+        "zh": "監控網路流量中的惡意檔案傳輸、檔案完整性與事件紀錄"
+      },
+      {
+        "id": "D",
+        "en": "Jim should identify the web shell running in the network by analyzing server access, error logs, suspicious strings indicating encoding, user agent strings, and so on.",
+        "zh": "分析伺服器存取及錯誤紀錄、可疑編碼字串與 User-Agent 等，以辨識網路中的 Web Shell"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Jim 是大型跨國公司的資安分析師。近期駭客入侵組織網路，利用資料暫存技術，集中蒐集員工與客戶資料、業務策略、財務資訊及網路基礎設施資訊等敏感資料。Jim 應如何在駭客將資料傳出網路前，偵測這種資料暫存活動？"
+  },
+  {
+    "id": 12,
+    "en": "Andrews and Sons Corp. has decided to share threat information among sharing partners. Garry, a threat analyst, working in Andrews and Sons Corp., has asked to follow a trust model necessary to establish trust between sharing partners. In the trust model used by him, the first organization makes use of a body of evidence in a second organization, and the level of trust between two organizations depends on the degree and quality of evidence provided by the first organization. Which of the following types of trust model is used by Garry to establish the trust?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Mediated trust",
+        "zh": "中介信任"
+      },
+      {
+        "id": "B",
+        "en": "Mandated trust",
+        "zh": "強制信任"
+      },
+      {
+        "id": "C",
+        "en": "Direct historical trust",
+        "zh": "直接歷史信任"
+      },
+      {
+        "id": "D",
+        "en": "Validated trust",
+        "zh": "驗證式信任"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "原題證據提供方與使用方的描述有歧義；保留原文與答案。",
+    "lockOptions": false,
+    "zh": "Andrews and Sons 決定與合作夥伴分享威脅資訊。威脅分析師 Garry 被要求採用建立夥伴間信任的模型。在該模型中，第一個組織利用第二個組織的一組證據，而雙方的信任程度取決於第一個組織提供證據的程度與品質。這是哪一種信任模型？"
+  },
+  {
+    "id": 13,
+    "en": "A threat analyst obtains an intelligence related to a threat, where the data is sent in the form of a connection request from a remote host to the server. From this data, he obtains only the IP address of the source and destination but no contextual information. While processing this data, he obtains contextual information stating that multiple connection requests from different geo-locations are received by the server within a short time span, and as a result, the server is stressed and gradually its performance has reduced. He further performed analysis on the information based on the past and present experience and concludes the attack experienced by the client organization. Which of the following attacks is performed on the client organization?",
+    "options": [
+      {
+        "id": "A",
+        "en": "DHCP attacks",
+        "zh": "DHCP 攻擊"
+      },
+      {
+        "id": "B",
+        "en": "MAC spoofing attack",
+        "zh": "MAC 偽冒攻擊"
+      },
+      {
+        "id": "C",
+        "en": "Distributed Denial-of-Service (DDoS) attack",
+        "zh": "分散式阻斷服務（DDoS）攻擊"
+      },
+      {
+        "id": "D",
+        "en": "Bandwidth attack",
+        "zh": "頻寬攻擊"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "威脅分析師取得一筆遠端主機向伺服器發出連線請求的資料，最初只有來源與目的 IP，沒有脈絡。處理後發現，伺服器在短時間內收到來自不同地理位置的大量連線請求，導致負載加重、效能逐漸下降。他再根據過去與目前的經驗分析並判定攻擊類型。客戶組織遭受哪一種攻擊？"
+  },
+  {
+    "id": 14,
+    "en": "Jame, a professional hacker, is trying to hack the confidential information of a target organization. He identified the vulnerabilities in the target system and created a tailored deliverable malicious payload using an exploit and a backdoor to send it to the victim. Which of the following phases of cyber kill chain methodology is Jame executing?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Reconnaissance",
+        "zh": "偵察"
+      },
+      {
+        "id": "B",
+        "en": "Installation",
+        "zh": "安裝"
+      },
+      {
+        "id": "C",
+        "en": "Weaponization",
+        "zh": "武器化"
+      },
+      {
+        "id": "D",
+        "en": "Exploitation",
+        "zh": "漏洞利用"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "專業駭客 Jame 想竊取目標組織的機密資訊。他識別目標系統漏洞後，結合漏洞利用程式與後門，製作客製化、可傳送給受害者的惡意酬載。目前執行的是 Cyber Kill Chain 的哪個階段？"
+  },
+  {
+    "id": 15,
+    "en": "Steve works as an analyst in a UK-based firm. He was asked to perform network monitoring to find any evidence of compromise. During the network monitoring, he came to know that there are multiple logins from different locations in a short time span. Moreover, he also observed certain irregular log in patterns from locations where the organization does not have business relations. This resembles that somebody is trying to steal confidential information. Which of the following key indicators of compromise does this scenario present?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Unusual outbound network traffic",
+        "zh": "異常對外網路流量"
+      },
+      {
+        "id": "B",
+        "en": "Unexpected patching of systems",
+        "zh": "非預期的系統修補"
+      },
+      {
+        "id": "C",
+        "en": "Unusual activity through privileged user account",
+        "zh": "特權帳號的異常活動"
+      },
+      {
+        "id": "D",
+        "en": "Geographical anomalies",
+        "zh": "地理位置異常"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Steve 是英國公司的分析師，受命監控網路以尋找入侵證據。他發現短時間內有多個來自不同地點的登入，也觀察到來自組織沒有業務往來地區的不規則登入模式，疑似有人試圖竊取機密資訊。這是哪一種關鍵入侵指標？"
+  },
+  {
+    "id": 16,
+    "en": "Which of the following characteristics of APT refers to numerous attempts done by the attacker to gain entry to the target’s network?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Risk tolerance",
+        "zh": "風險容忍度"
+      },
+      {
+        "id": "B",
+        "en": "Timeliness",
+        "zh": "時效性"
+      },
+      {
+        "id": "C",
+        "en": "Attack origination points",
+        "zh": "攻擊起始點"
+      },
+      {
+        "id": "D",
+        "en": "Multiphased",
+        "zh": "多階段"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "題幹的「多次嘗試」與答案「Attack origination points」的對應待核對。",
+    "lockOptions": false,
+    "zh": "下列哪一項 APT 特性，指的是攻擊者為進入目標網路而進行的多次嘗試？"
+  },
+  {
+    "id": 17,
+    "en": "Lizzy, an analyst, wants to recognize the level of risks to the organization so as to plan countermeasures against cyber attacks. She used a threat modelling methodology where she performed the following stages:\nStage 1: Build asset-based threat profiles\nStage 2: Identify infrastructure vulnerabilities\nStage 3: Develop security strategy and plans\nWhich of the following threat modelling methodologies was used by Lizzy in the aforementioned scenario?",
+    "options": [
+      {
+        "id": "A",
+        "en": "TRIKE",
+        "zh": "TRIKE"
+      },
+      {
+        "id": "B",
+        "en": "VAST",
+        "zh": "VAST"
+      },
+      {
+        "id": "C",
+        "en": "OCTAVE",
+        "zh": "OCTAVE"
+      },
+      {
+        "id": "D",
+        "en": "DREAD",
+        "zh": "DREAD"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "分析師 Lizzy 想了解組織風險程度，以規劃網路攻擊的因應措施。她使用的威脅建模方法包含：\n階段 1：建立以資產為基礎的威脅概況。\n階段 2：識別基礎設施漏洞。\n階段 3：制定安全策略與計畫。\n她使用哪一種威脅建模方法？"
+  },
+  {
+    "id": 18,
+    "en": "Which of the following types of threat attribution deals with the identification of the specific person, society, or a country sponsoring a well- planned and executed intrusion or attack over its target?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Nation-state attribution",
+        "zh": "國家級歸因"
+      },
+      {
+        "id": "B",
+        "en": "True attribution",
+        "zh": "真實歸因"
+      },
+      {
+        "id": "C",
+        "en": "Campaign attribution",
+        "zh": "攻擊活動歸因"
+      },
+      {
+        "id": "D",
+        "en": "Intrusion-set attribution",
+        "zh": "入侵集合歸因"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "下列哪一種威脅歸因，是識別支持精心策劃並執行入侵或攻擊的特定個人、團體或國家？"
+  },
+  {
+    "id": 19,
+    "en": "In a team of threat analysts, two individuals were competing over projecting their own hypotheses on a given malware. However, to find logical proofs to confirm their hypotheses, the threat intelligence manager used a de-biasing strategy that involves learning strategic decision making in the circumstances comprising multistep interactions with numerous representatives, either having or without any perfect relevant information. Which of the following de-biasing strategies the threat intelligence manager used to confirm their hypotheses?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Game theory",
+        "zh": "賽局理論"
+      },
+      {
+        "id": "B",
+        "en": "Machine learning",
+        "zh": "機器學習"
+      },
+      {
+        "id": "C",
+        "en": "Decision theory",
+        "zh": "決策理論"
+      },
+      {
+        "id": "D",
+        "en": "Cognitive psychology",
+        "zh": "認知心理學"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "威脅分析團隊中，兩位成員各自提出對某惡意程式的假設。為找出能驗證假設的邏輯證據，主管使用一種去偏誤策略，研究多方參與、多步驟互動，以及有或沒有完整相關資訊時的策略決策。這是哪一種策略？"
+  },
+  {
+    "id": 20,
+    "en": "Cybersol Technologies initiated a cyber-threat intelligence program with a team of threat intelligence analysts. During the process, the analysts started converting the raw data into useful information by applying various techniques, such as machine-based techniques, and statistical methods. In which of the following phases of the threat intelligence lifecycle is the threat intelligence team currently working?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Dissemination and integration",
+        "zh": "傳遞與整合"
+      },
+      {
+        "id": "B",
+        "en": "Planning and direction",
+        "zh": "規劃與指導"
+      },
+      {
+        "id": "C",
+        "en": "Processing and exploitation",
+        "zh": "處理與利用"
+      },
+      {
+        "id": "D",
+        "en": "Analysis and production",
+        "zh": "分析與產製"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Cybersol Technologies 啟動網路威脅情資計畫。分析師利用機器處理技術、統計方法等各種技術，把原始資料轉成有用資訊。目前處於威脅情資生命週期的哪個階段？"
+  },
+  {
+    "id": 21,
+    "en": "Jian is a member of the security team at Trinity, Inc. He was conducting a real-time assessment of system activities in order to acquire threat intelligence feeds. He acquired feeds from sources like honeynets, P2P monitoring. infrastructure, and application logs. Which of the following categories of threat intelligence feed was acquired by Jian?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Internal intelligence feeds",
+        "zh": "內部情資饋送"
+      },
+      {
+        "id": "B",
+        "en": "External intelligence feeds",
+        "zh": "外部情資饋送"
+      },
+      {
+        "id": "C",
+        "en": "CSV data feeds",
+        "zh": "CSV 資料饋送"
+      },
+      {
+        "id": "D",
+        "en": "Proactive surveillance feeds",
+        "zh": "主動監測饋送"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Trinity 的資安團隊成員 Jian 即時評估系統活動，以取得威脅情資饋送。他從蜜網、P2P 監控、基礎設施及應用程式紀錄等來源取得資料。這屬於哪一類威脅情資饋送？"
+  },
+  {
+    "id": 22,
+    "en": "Which of the following components refers to a node in the network that routes the traffic from a workstation to external command and control server and helps in identification of installed malware in the network?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Repeater",
+        "zh": "中繼器"
+      },
+      {
+        "id": "B",
+        "en": "Gateway",
+        "zh": "閘道器"
+      },
+      {
+        "id": "C",
+        "en": "Hub",
+        "zh": "集線器"
+      },
+      {
+        "id": "D",
+        "en": "Network interface card (NIC)",
+        "zh": "網路介面卡（NIC）"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "下列哪一種元件是網路上的節點，負責將工作站流量轉送至外部命令與控制伺服器，並有助於辨識網路中已安裝的惡意程式？"
+  },
+  {
+    "id": 23,
+    "en": "What is the correct sequence of steps involved in scheduling a threat intelligence program?\n1. Review the project charter\n2. Identify all deliverables\n3. Identify the sequence of activities\n4. Identify task dependencies\n5. Develop the final schedule\n6. Estimate duration of each activity\n7. Identify and estimate resources for all activities\n8. Define all activities\n9. Build a work breakdown structure (WBS)",
+    "options": [
+      {
+        "id": "A",
+        "en": "1-->9-->2-->8-->3-->7-->4-->6-->5",
+        "zh": "1→9→2→8→3→7→4→6→5"
+      },
+      {
+        "id": "B",
+        "en": "3-->4-->5-->2-->1-->9-->8-->7-->6",
+        "zh": "3→4→5→2→1→9→8→7→6"
+      },
+      {
+        "id": "C",
+        "en": "1-->2-->3-->4-->5-->6-->9-->8-->7",
+        "zh": "1→2→3→4→5→6→9→8→7"
+      },
+      {
+        "id": "D",
+        "en": "1-->2-->3-->4-->5-->6-->7-->8-->9",
+        "zh": "1→2→3→4→5→6→7→8→9"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "安排威脅情資計畫時，下列步驟的正確順序為何？\n1. 檢視專案章程\n2. 識別所有交付成果\n3. 識別活動順序\n4. 識別任務相依性\n5. 制定最終時程\n6. 估算各活動所需時間\n7. 識別並估算所有活動所需資源\n8. 定義所有活動\n9. 建立工作分解結構（WBS）"
+  },
+  {
+    "id": 24,
+    "en": "Kim, an analyst, is looking for an intelligence-sharing platform to gather and share threat information from a variety of sources. He wants to use this information to develop security policies to enhance the overall security posture of his organization. Which of the following sharing platforms should be used by Kim?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Cuckoo sandbox",
+        "zh": "Cuckoo 沙箱"
+      },
+      {
+        "id": "B",
+        "en": "OmniPeek",
+        "zh": "OmniPeek"
+      },
+      {
+        "id": "C",
+        "en": "PortDroid network analysis",
+        "zh": "PortDroid 網路分析"
+      },
+      {
+        "id": "D",
+        "en": "Blueliv threat exchange network",
+        "zh": "Blueliv 威脅交換網路"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "分析師 Kim 想找一個情資分享平台，蒐集並分享來自各種來源的威脅資訊，再用於制定安全政策，提升組織整體安全態勢。應選擇哪一個平台？"
+  },
+  {
+    "id": 25,
+    "en": "During the process of threat intelligence analysis, John, a threat analyst, successfully extracted an indication of adversary’s information, such as Modus operandi, tools, communication channels, and forensics evasion strategies used by adversaries. Identify the type of threat intelligence analysis is performed by John.",
+    "options": [
+      {
+        "id": "A",
+        "en": "Operational threat intelligence analysis",
+        "zh": "作業層級威脅情資分析"
+      },
+      {
+        "id": "B",
+        "en": "Technical threat intelligence analysis",
+        "zh": "技術層級威脅情資分析"
+      },
+      {
+        "id": "C",
+        "en": "Strategic threat intelligence analysis",
+        "zh": "策略層級威脅情資分析"
+      },
+      {
+        "id": "D",
+        "en": "Tactical threat intelligence analysis",
+        "zh": "戰術層級威脅情資分析"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "威脅分析師 John 在分析過程中取得對手資訊，包括慣用手法、工具、通訊管道及規避鑑識策略。這屬於哪一種威脅情資分析？"
+  },
+  {
+    "id": 26,
+    "en": "SecurityTech Inc. is developing a TI plan where it can drive more advantages in less funds. In the process of selecting a TI platform, it wants to incorporate a feature that ranks elements such as intelligence sources, threat actors, attacks, and digital assets of the organization, so that it can put in more funds toward the resources which are critical for the organization’s security. Which of the following key features should SecurityTech Inc. consider in their TI plan for selecting the TI platform?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Search",
+        "zh": "搜尋"
+      },
+      {
+        "id": "B",
+        "en": "Open",
+        "zh": "開放性"
+      },
+      {
+        "id": "C",
+        "en": "Workflow",
+        "zh": "工作流程"
+      },
+      {
+        "id": "D",
+        "en": "Scoring",
+        "zh": "評分"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "SecurityTech 想以較少經費取得更多情資效益。選擇威脅情資平台時，希望具備能對情資來源、威脅行為者、攻擊及組織數位資產評定等級的功能，以便將經費投入對安全最重要的資源。應考慮哪一項關鍵功能？"
+  },
+  {
+    "id": 27,
+    "en": "Mr. Bob, a threat analyst, is performing analysis of competing hypotheses (ACH). He has reached to a stage where he is required to apply his analysis skills effectively to reject as many hypotheses and select the best hypotheses from the identified bunch of hypotheses, and this is done with the help of listed evidence. Then, he prepares a matrix where all the screened hypotheses are placed on the top, and the listed evidence for the hypotheses are placed at the bottom. What stage of ACH is Bob currently in?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Diagnostics",
+        "zh": "診斷性分析"
+      },
+      {
+        "id": "B",
+        "en": "Evidence",
+        "zh": "證據"
+      },
+      {
+        "id": "C",
+        "en": "Inconsistency",
+        "zh": "不一致性分析"
+      },
+      {
+        "id": "D",
+        "en": "Refinement",
+        "zh": "精煉"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Bob 正在執行競爭假設分析（ACH）。他需要有效運用分析能力，根據已列出的證據排除盡可能多的假設，選出最佳假設，並建立矩陣，將篩選後的假設放在上方、支持假設的證據列於下方。目前處於 ACH 的哪個階段？"
+  },
+  {
+    "id": 28,
+    "en": "Tyrion, a professional hacker, is targeting an organization to steal confidential information. He wants to perform website footprinting to obtain the following information, which is hidden in the web page header. Connection status and content type Accept-ranges and last-modified information X-powered-by information - Web server in use and its version Which of the following tools should the Tyrion use to view header content?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Hydra",
+        "zh": "Hydra"
+      },
+      {
+        "id": "B",
+        "en": "AutoShun",
+        "zh": "AutoShun"
+      },
+      {
+        "id": "C",
+        "en": "Vanguard enforcer",
+        "zh": "Vanguard Enforcer"
+      },
+      {
+        "id": "D",
+        "en": "Burp suite",
+        "zh": "Burp Suite"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "駭客 Tyrion 想竊取組織機密。他進行網站足跡蒐集，想從網頁標頭取得連線狀態、內容類型、Accept-Ranges、Last-Modified、X-Powered-By，以及使用中的網頁伺服器與版本等資訊。應使用哪一種工具檢視標頭？"
+  },
+  {
+    "id": 29,
+    "en": "Joe works as a threat intelligence analyst with Xsecurity Inc. He is assessing the TI program by comparing the project results with the original objectives by reviewing project charter. He is also reviewing the list of expected deliverables to ensure that each of those is delivered to an acceptable level of quality. Identify the activity that Joe is performing to assess a TI program’s success or failure.",
+    "options": [
+      {
+        "id": "A",
+        "en": "Determining the fulfillment of stakeholders",
+        "zh": "確認利害關係人需求的滿足程度"
+      },
+      {
+        "id": "B",
+        "en": "Identifying areas of further improvement",
+        "zh": "識別可進一步改善之處"
+      },
+      {
+        "id": "C",
+        "en": "Determining the costs and benefits associated with the program",
+        "zh": "評估計畫相關成本與效益"
+      },
+      {
+        "id": "D",
+        "en": "Conducting a gap analysis",
+        "zh": "執行差距分析"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Xsecurity 的威脅情資分析師 Joe 透過檢視專案章程，比較專案成果與原始目標，並檢查預期交付成果清單，確認每項成果均達到可接受的品質。這是評估情資計畫成敗的哪一項活動？"
+  },
+  {
+    "id": 30,
+    "en": "An analyst wants to disseminate the information effectively so that the consumers can acquire and benefit out of the intelligence. Which of the following criteria must an analyst consider in order to make the intelligence concise, to the point, accurate, and easily understandable and must consist of a right balance between tables, narrative, numbers, graphics, and multimedia?",
+    "options": [
+      {
+        "id": "A",
+        "en": "The right time",
+        "zh": "適當的時間"
+      },
+      {
+        "id": "B",
+        "en": "The right presentation",
+        "zh": "適當的呈現方式"
+      },
+      {
+        "id": "C",
+        "en": "The right order",
+        "zh": "適當的順序"
+      },
+      {
+        "id": "D",
+        "en": "The right content",
+        "zh": "適當的內容"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "分析師想有效傳遞資訊，讓情資使用者能取得情資並從中受益。為使情資精簡、切題、正確且容易理解，並在表格、文字敘述、數字、圖形與多媒體之間取得適當平衡，應考量哪一項準則？"
+  },
+  {
+    "id": 31,
+    "en": "Tracy works as a CISO in a large multinational company. She consumes threat intelligence to understand the changing trends of cyber security. She requires intelligence to understand the current business trends and make appropriate decisions regarding new technologies, security budget, improvement of processes, and staff. The intelligence helps her in minimizing business risks and protecting the new technology and business initiatives. Identify the type of threat intelligence consumer is Tracy.",
+    "options": [
+      {
+        "id": "A",
+        "en": "Tactical users",
+        "zh": "戰術使用者"
+      },
+      {
+        "id": "B",
+        "en": "Strategic users",
+        "zh": "策略使用者"
+      },
+      {
+        "id": "C",
+        "en": "Operational users",
+        "zh": "作業使用者"
+      },
+      {
+        "id": "D",
+        "en": "Technical users",
+        "zh": "技術使用者"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Tracy 是大型跨國公司的資安長（CISO）。她使用情資了解資安變化與當前業務趨勢，以決定新技術、安全預算、流程改善及人力配置，降低業務風險並保護新技術與業務計畫。她屬於哪一種威脅情資使用者？"
+  },
+  {
+    "id": 32,
+    "en": "An organization suffered many major attacks and lost critical information, such as employee records, and financial information. Therefore, the management decides to hire a threat analyst to extract the strategic threat intelligence that provides high-level information regarding current cyber-security posture, threats, details on the financial impact of various cyber-activities, and so on. Which of the following sources will help the analyst to collect the required intelligence?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Active campaigns, attacks on other organizations, data feeds from external third parties",
+        "zh": "正在進行的攻擊活動、其他組織遭受的攻擊、外部第三方資料饋送"
+      },
+      {
+        "id": "B",
+        "en": "OSINT, CTI vendors, ISAO/ISACs",
+        "zh": "開源情報（OSINT）、CTI 供應商、ISAO／ISAC"
+      },
+      {
+        "id": "C",
+        "en": "Campaign reports, malware, incident reports, attack group reports, human intelligence",
+        "zh": "攻擊活動報告、惡意程式、事件報告、攻擊團體報告、人力情報"
+      },
+      {
+        "id": "D",
+        "en": "Human, social media, chat rooms",
+        "zh": "人員、社群媒體、聊天室"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "組織遭受多次重大攻擊，失去員工紀錄與財務資訊等關鍵資料。管理階層決定聘請威脅分析師，取得策略層級威脅情資，了解目前資安態勢、威脅及各類網路活動的財務影響等高階資訊。下列哪一組來源有助於蒐集所需情資？"
+  },
+  {
+    "id": 33,
+    "en": "A network administrator working in an ABC organization collected log files generated by a traffic monitoring system, which may not seem to have useful information, but after performing proper analysis by him, the same information can be used to detect an attack in the network. Which of the following categories of threat information has he collected?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Advisories",
+        "zh": "警示通報"
+      },
+      {
+        "id": "B",
+        "en": "Strategic reports",
+        "zh": "策略報告"
+      },
+      {
+        "id": "C",
+        "en": "Detection indicators",
+        "zh": "偵測指標"
+      },
+      {
+        "id": "D",
+        "en": "Low-level data",
+        "zh": "低階資料"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "ABC 組織的網路管理員蒐集流量監控系統產生的紀錄檔。這些紀錄表面上似乎沒有有用資訊，但經適當分析後，可用來偵測網路攻擊。他蒐集的是哪一類威脅資訊？"
+  },
+  {
+    "id": 34,
+    "en": "Sam works as an analyst in an organization named InfoTech Security. He was asked to collect information from various threat intelligence sources. In meeting the deadline, he forgot to verify the threat intelligence sources and used data from an open-source data provider, who offered it at a very low cost. Through it was beneficial at the initial stage but relying on such data providers can produce unreliable data and noise putting the organization network into risk. What mistake Sam did that led to this situation?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Sam used unreliable intelligence sources.",
+        "zh": "使用不可靠的情資來源"
+      },
+      {
+        "id": "B",
+        "en": "Sam used data without context.",
+        "zh": "使用沒有脈絡的資料"
+      },
+      {
+        "id": "C",
+        "en": "Sam did not use the proper standardization formats for representing threat data.",
+        "zh": "沒有使用適當的標準格式表示威脅資料"
+      },
+      {
+        "id": "D",
+        "en": "Sam did not use the proper technology to use or consume the information.",
+        "zh": "沒有使用適當的技術運用或接收資訊"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "InfoTech Security 的分析師 Sam 被要求從各種威脅情資來源蒐集資料。為趕上期限，他沒有驗證來源，就使用低價的開源資料供應商資料。雖然初期有幫助，但長期依賴這類來源可能產生不可靠資料與雜訊，使組織網路面臨風險。Sam 犯了什麼錯誤？"
+  },
+  {
+    "id": 35,
+    "en": "Alice, an analyst, shared information with security operation managers and network operations center (NOC) staff for protecting the organizational resources against various threats. Information shared by Alice was highly technical and include threat actor TTPs, malware campaigns, tools used by threat actors, and so on. Which of the following types of threat intelligence was shared by Alice?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Strategic threat intelligence",
+        "zh": "策略層級威脅情資"
+      },
+      {
+        "id": "B",
+        "en": "Tactical threat intelligence",
+        "zh": "戰術層級威脅情資"
+      },
+      {
+        "id": "C",
+        "en": "Technical threat intelligence",
+        "zh": "技術層級威脅情資"
+      },
+      {
+        "id": "D",
+        "en": "Operational threat intelligence",
+        "zh": "作業層級威脅情資"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "分析師 Alice 與安全維運主管及網路維運中心（NOC）人員分享資訊，以保護組織資源。內容高度技術化，包含威脅行為者的 TTPs、惡意程式攻擊活動及攻擊者工具等。這是哪一種威脅情資？"
+  },
+  {
+    "id": 36,
+    "en": "An XYZ organization hired Mr. Andrews, a threat analyst. In order to identify the threats and mitigate the effect of such threats, Mr. Andrews was asked to perform threat modeling. During the process of threat modeling, he collected important information about the treat actor and characterized the analytic behavior of the adversary that includes technological details, goals, and motives that can be useful in building a strong countermeasure. What stage of the threat modeling is Mr. Andrews currently in?",
+    "options": [
+      {
+        "id": "A",
+        "en": "System modeling",
+        "zh": "系統建模"
+      },
+      {
+        "id": "B",
+        "en": "Threat determination and identification",
+        "zh": "威脅判定與識別"
+      },
+      {
+        "id": "C",
+        "en": "Threat profiling and attribution",
+        "zh": "威脅剖析與歸因"
+      },
+      {
+        "id": "D",
+        "en": "Threat ranking",
+        "zh": "威脅排序"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "XYZ 組織聘請威脅分析師 Andrews 執行威脅建模，以識別威脅並降低影響。他蒐集威脅行為者的重要資訊，描述對手的行為特徵，包括技術細節、目標與動機，以協助建立有效防護措施。目前處於威脅建模的哪個階段？"
+  },
+  {
+    "id": 37,
+    "en": "Alison, an analyst in an XYZ organization, wants to retrieve information about a company’s website from the time of its inception as well as the removed information from the target website. What should Alison do to get the information he needs.",
+    "options": [
+      {
+        "id": "A",
+        "en": "Alison should use SmartWhois to extract the required website information.",
+        "zh": "使用 SmartWhois 取得所需網站資訊"
+      },
+      {
+        "id": "B",
+        "en": "Alison should use https://archive.org to extract the required website information.",
+        "zh": "使用 https://archive.org 取得所需網站資訊"
+      },
+      {
+        "id": "C",
+        "en": "Alison should run the Web Data Extractor tool to extract the required website information.",
+        "zh": "執行 Web Data Extractor 工具取得所需網站資訊"
+      },
+      {
+        "id": "D",
+        "en": "Alison should recover cached pages of the website from the Google search engine cache to extract the required website information.",
+        "zh": "從 Google 搜尋引擎快取還原網站頁面，取得所需資訊"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "XYZ 組織的分析師 Alison 想取得公司網站自建立以來的資訊，以及已從目標網站移除的內容。應採取哪一項做法？"
+  },
+  {
+    "id": 38,
+    "en": "In which of the following forms of bulk data collection are large amounts of data first collected from multiple sources in multiple formats and then processed to achieve threat intelligence?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Structured form",
+        "zh": "結構化形式"
+      },
+      {
+        "id": "B",
+        "en": "Hybrid form",
+        "zh": "混合形式"
+      },
+      {
+        "id": "C",
+        "en": "Production form",
+        "zh": "產製形式"
+      },
+      {
+        "id": "D",
+        "en": "Unstructured form",
+        "zh": "非結構化形式"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "下列哪一種大量資料蒐集形式，會先從多個來源以多種格式取得大量資料，再進行處理以產生威脅情資？"
+  },
+  {
+    "id": 39,
+    "en": "In which of the following storage architecture is the data stored in a localized system, server, or storage hardware and capable of storing a limited amount of data in its database and locally available for data usage?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Distributed storage",
+        "zh": "分散式儲存"
+      },
+      {
+        "id": "B",
+        "en": "Object-based storage",
+        "zh": "物件式儲存"
+      },
+      {
+        "id": "C",
+        "en": "Centralized storage",
+        "zh": "集中式儲存"
+      },
+      {
+        "id": "D",
+        "en": "Cloud storage",
+        "zh": "雲端儲存"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "哪一種儲存架構將資料存放在本地系統、伺服器或儲存硬體中，資料庫可儲存的資料量有限，並供本地使用？"
+  },
+  {
+    "id": 40,
+    "en": "ABC is a well-established cyber-security company in the United States. The organization implemented the automation of tasks such as data enrichment and indicator aggregation. They also joined various communities to increase their knowledge about the emerging threats. However, the security teams can only detect and prevent identified threats in a reactive approach. Based on threat intelligence maturity model, identify the level of ABC to know the stage at which the organization stands with its security and vulnerabilities.",
+    "options": [
+      {
+        "id": "A",
+        "en": "Level 2: increasing CTI capabilities",
+        "zh": "第 2 級：提升 CTI 能力"
+      },
+      {
+        "id": "B",
+        "en": "Level 3: CTI program in place",
+        "zh": "第 3 級：已建立 CTI 計畫"
+      },
+      {
+        "id": "C",
+        "en": "Level 1: preparing for CTI",
+        "zh": "第 1 級：準備導入 CTI"
+      },
+      {
+        "id": "D",
+        "en": "Level 0: vague where to start",
+        "zh": "第 0 級：不清楚從何開始"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "ABC 是美國一家成熟的資安公司。組織已自動化資料豐富化與指標彙整等任務，也加入多個社群了解新興威脅。不過，資安團隊仍只能以被動反應方式偵測及防範已知威脅。依威脅情資成熟度模型，ABC 屬於哪個層級？"
+  },
+  {
+    "id": 41,
+    "en": "Alice, a threat intelligence analyst at HiTech Cyber Solutions, wants to gather information for identifying emerging threats to the organization and implement essential techniques to prevent their systems and networks from such attacks. Alice is searching for online sources to obtain information such as the method used to launch an attack, and techniques and tools used to perform an attack and the procedures followed for covering the tracks after an attack. Which of the following online sources should Alice use to gather such information?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Financial services",
+        "zh": "金融服務"
+      },
+      {
+        "id": "B",
+        "en": "Social network settings",
+        "zh": "社群網路設定"
+      },
+      {
+        "id": "C",
+        "en": "Hacking forums",
+        "zh": "駭客論壇"
+      },
+      {
+        "id": "D",
+        "en": "Job sites",
+        "zh": "求職網站"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "HiTech Cyber Solutions 的威脅情資分析師 Alice 想識別新興威脅，採取必要技術保護系統與網路。她想透過線上來源了解攻擊發動方法、工具與技術，以及攻擊後掩蓋蹤跡的程序。應使用哪一種來源？"
+  },
+  {
+    "id": 42,
+    "en": "Karry, a threat analyst at an XYZ organization, is performing threat intelligence analysis. During the data collection phase, he used a data collection method that involves no participants and is purely based on analysis and observation of activities and processes going on within the local boundaries of the organization. Identify the type data collection method used by the Karry.",
+    "options": [
+      {
+        "id": "A",
+        "en": "Active data collection",
+        "zh": "主動資料蒐集"
+      },
+      {
+        "id": "B",
+        "en": "Passive data collection",
+        "zh": "被動資料蒐集"
+      },
+      {
+        "id": "C",
+        "en": "Exploited data collection",
+        "zh": "利用式資料蒐集"
+      },
+      {
+        "id": "D",
+        "en": "Raw data collection",
+        "zh": "原始資料蒐集"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "XYZ 組織的威脅分析師 Karry 正執行情資分析。蒐集資料時，他使用不涉及參與者、純粹分析與觀察組織本地範圍內活動和流程的方法。這是哪一種資料蒐集方法？"
+  },
+  {
+    "id": 43,
+    "en": "Sarah is a security operations center (SOC) analyst working at JW Williams and Sons organization based in Chicago. As a part of security operations, she contacts information providers (sharing partners) for gathering information such as collections of validated and prioritized threat indicators along with a detailed technical analysis of malware samples, botnets, DDoS attack methods, and various other malicious tools. She further used the collected information at the tactical and operational levels. Sarah obtained the required information from which of the following types of sharing partner?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Providers of threat data feeds",
+        "zh": "威脅資料饋送提供者"
+      },
+      {
+        "id": "B",
+        "en": "Providers of threat indicators",
+        "zh": "威脅指標提供者"
+      },
+      {
+        "id": "C",
+        "en": "Providers of comprehensive cyber-threat intelligence",
+        "zh": "完整網路威脅情資提供者"
+      },
+      {
+        "id": "D",
+        "en": "Providers of threat actors",
+        "zh": "威脅行為者提供者"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Sarah 是芝加哥 JW Williams and Sons 的 SOC 分析師。她聯絡資訊提供者（分享夥伴），取得經驗證且排定優先順序的威脅指標，以及惡意程式樣本、殭屍網路、DDoS 攻擊方法與其他惡意工具的詳細技術分析，再將資訊用於戰術與作業層級。她使用哪一類分享夥伴？"
+  },
+  {
+    "id": 44,
+    "en": "Walter and Sons Company has faced major cyber attacks and lost confidential data. The company has decided to concentrate more on the security rather than other resources. Therefore, they hired Alice, a threat analyst, to perform data analysis. Alice was asked to perform qualitative data analysis to extract useful information from collected bulk data. Which of the following techniques will help Alice to perform qualitative data analysis?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Regression analysis, variance analysis, and so on",
+        "zh": "迴歸分析、變異數分析等"
+      },
+      {
+        "id": "B",
+        "en": "Numerical calculations, statistical modeling, measurement, research, and so on.",
+        "zh": "數值計算、統計建模、測量與研究等"
+      },
+      {
+        "id": "C",
+        "en": "Brainstorming, interviewing, SWOT analysis, Delphi technique, and so on",
+        "zh": "腦力激盪、訪談、SWOT 分析、德爾菲法等"
+      },
+      {
+        "id": "D",
+        "en": "Finding links between data and discover threat-related information",
+        "zh": "尋找資料間的連結並發現威脅相關資訊"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Walter and Sons 遭受重大網路攻擊並遺失機密資料，因此決定更重視資安，聘請分析師 Alice 執行資料分析。她被要求透過質性分析，從已蒐集的大量資料中擷取有用資訊。應採用哪一組技術？"
+  },
+  {
+    "id": 45,
+    "en": "An analyst is conducting threat intelligence analysis in a client organization, and during the information gathering process, he gathered information from the publicly available sources and analyzed to obtain a rich useful form of intelligence. The information source that he used is primarily used for national security, law enforcement, and for collecting intelligence required for business or strategic decision making. Which of the following sources of intelligence did the analyst use to collect information?",
+    "options": [
+      {
+        "id": "A",
+        "en": "OPSEC",
+        "zh": "作業安全（OPSEC）"
+      },
+      {
+        "id": "B",
+        "en": "ISAC",
+        "zh": "資訊分享與分析中心（ISAC）"
+      },
+      {
+        "id": "C",
+        "en": "OSINT",
+        "zh": "開源情報（OSINT）"
+      },
+      {
+        "id": "D",
+        "en": "SIGINT",
+        "zh": "信號情報（SIGINT）"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "分析師替客戶組織執行威脅情資分析。他從公開可取得的來源蒐集資料，再分析產生豐富且有用的情資。此類來源主要用於國家安全、執法，以及業務或策略決策。這是哪一種情報來源？"
+  },
+  {
+    "id": 46,
+    "en": "In which of the following attacks does the attacker exploit vulnerabilities in a computer application before the software developer can release a patch for them?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Active online attack",
+        "zh": "主動線上攻擊"
+      },
+      {
+        "id": "B",
+        "en": "Zero-day attack",
+        "zh": "零時差攻擊"
+      },
+      {
+        "id": "C",
+        "en": "Distributed network attack",
+        "zh": "分散式網路攻擊"
+      },
+      {
+        "id": "D",
+        "en": "Advanced persistent attack",
+        "zh": "進階持續性攻擊"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "下列哪一種攻擊，是在軟體開發者釋出修補程式之前，就利用應用程式漏洞進行攻擊？"
+  },
+  {
+    "id": 47,
+    "en": "H&P, Inc. is a small-scale organization that has decided to outsource the network security monitoring due to lack of resources in the organization. They are looking for the options where they can directly incorporate threat intelligence into their existing network defense solutions. Which of the following is the most cost-effective methods the organization can employ?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Recruit the right talent",
+        "zh": "招募合適人才"
+      },
+      {
+        "id": "B",
+        "en": "Look for an individual within the organization",
+        "zh": "尋找組織內部人員"
+      },
+      {
+        "id": "C",
+        "en": "Recruit data management solution provider",
+        "zh": "聘用資料管理方案供應商"
+      },
+      {
+        "id": "D",
+        "en": "Recruit managed security service providers (MSSP)",
+        "zh": "聘用託管式資安服務供應商（MSSP）"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "H&P 是一家資源不足的小型組織，決定將網路安全監控外包，希望能直接把威脅情資納入現有的網路防禦方案。下列哪一種方法最具成本效益？"
+  },
+  {
+    "id": 48,
+    "en": "Henry. a threat intelligence analyst at ABC Inc., is working on a threat intelligence program. He was assigned to work on establishing criteria for prioritization of intelligence needs and requirements. Which of the following considerations must be employed by Henry to prioritize intelligence requirements?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Understand frequency and impact of a threat",
+        "zh": "了解威脅發生頻率與影響"
+      },
+      {
+        "id": "B",
+        "en": "Understand data reliability",
+        "zh": "了解資料可靠性"
+      },
+      {
+        "id": "C",
+        "en": "Develop a collection plan",
+        "zh": "制定蒐集計畫"
+      },
+      {
+        "id": "D",
+        "en": "Produce actionable data",
+        "zh": "產製可採取行動的資料"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "ABC 的威脅情資分析師 Henry 負責建立情資需求的優先排序準則。他應考量哪一項因素來決定情資需求的優先順序？"
+  },
+  {
+    "id": 49,
+    "en": "Tim is working as an analyst in an ABC organization. His organization had been facing many challenges in converting the raw threat intelligence data into meaningful contextual information. After inspection, he found that it was due to noise obtained from misrepresentation of data from huge data collections. Hence, it is important to clean the data before performing data analysis using techniques such as data reduction. He needs to choose an appropriate threat intelligence framework that automatically performs data collection, filtering, and analysis for his organization. Which of the following threat intelligence frameworks should he choose to perform such task?",
+    "options": [
+      {
+        "id": "A",
+        "en": "HighCharts",
+        "zh": "HighCharts"
+      },
+      {
+        "id": "B",
+        "en": "SIGVERIF",
+        "zh": "SIGVERIF"
+      },
+      {
+        "id": "C",
+        "en": "Threat grid",
+        "zh": "Threat Grid"
+      },
+      {
+        "id": "D",
+        "en": "TC complete",
+        "zh": "TC Complete"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "ABC 組織的分析師 Tim 發現，組織難以將原始威脅情資資料轉換成有意義、具脈絡的資訊，原因是大量資料中錯誤表達所產生的雜訊。因此，分析前應先透過資料縮減等技術清理資料。他需要能自動蒐集、篩選與分析資料的威脅情資框架。應選擇哪一個？"
+  },
+  {
+    "id": 50,
+    "en": "A threat analyst wants to incorporate a requirement in the threat knowledge repository that provides an ability to modify or delete past or irrelevant threat data. Which of the following requirement must he include in the threat knowledge repository to fulfil his needs?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Evaluating performance",
+        "zh": "效能評估"
+      },
+      {
+        "id": "B",
+        "en": "Protection ranking",
+        "zh": "防護排序"
+      },
+      {
+        "id": "C",
+        "en": "Searchable functionality",
+        "zh": "可搜尋功能"
+      },
+      {
+        "id": "D",
+        "en": "Data management",
+        "zh": "資料管理"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "威脅分析師希望威脅知識儲存庫能修改或刪除過去或已不相關的威脅資料。應納入哪一項需求？"
+  },
+  {
+    "id": 51,
+    "en": "A company, TechSoft Solutions, implemented a threat intelligence program and began developing operational capabilities obtained in the previous levels and created an organized team approach for strategic analysis. The company also established necessary intelligence processes and workflows to extract their own threat intelligence. Identify the threat intelligence maturity level at which the company stands.",
+    "options": [
+      {
+        "id": "A",
+        "en": "Level 4: well-defined CTI program",
+        "zh": "第 4 級：完善定義的 CTI 計畫"
+      },
+      {
+        "id": "B",
+        "en": "Level 3: CTI program in place",
+        "zh": "第 3 級：已建立 CTI 計畫"
+      },
+      {
+        "id": "C",
+        "en": "Level 1: preparing for CTI",
+        "zh": "第 1 級：準備導入 CTI"
+      },
+      {
+        "id": "D",
+        "en": "Level 2: increasing CTI capabilities",
+        "zh": "第 2 級：提升 CTI 能力"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "TechSoft Solutions 已實施威脅情資計畫，開始發展前幾個層級取得的作業能力，建立有組織的團隊方式進行策略分析，並制定必要的情報流程與工作流程，以產生自己的威脅情資。公司目前處於哪一個成熟度層級？"
+  },
+  {
+    "id": 52,
+    "en": "Tech Crunch Inc. has hired John, who is a professional threat intelligence analyst. He was asked to conduct threat intelligence analysis that provides contextual information about the security events and incidents that further help the organization to disclose potential risks, provide greater insight into attacker methodologies, identify past malicious activities, and perform investigations on malicious activities in a more efficient way. Identify the type of threat intelligence John is going to perform for the organization.",
+    "options": [
+      {
+        "id": "A",
+        "en": "Technical threat intelligence",
+        "zh": "技術層級威脅情資"
+      },
+      {
+        "id": "B",
+        "en": "Tactical threat intelligence",
+        "zh": "戰術層級威脅情資"
+      },
+      {
+        "id": "C",
+        "en": "Operational threat intelligence",
+        "zh": "作業層級威脅情資"
+      },
+      {
+        "id": "D",
+        "en": "Strategic threat intelligence",
+        "zh": "策略層級威脅情資"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Tech Crunch 聘請專業威脅情資分析師 John，要求他提供安全事件與事故的脈絡資訊，協助揭露潛在風險、深入了解攻擊者方法、識別過去的惡意活動，並更有效率地調查惡意行為。他將執行哪一種威脅情資分析？"
+  },
+  {
+    "id": 53,
+    "en": "You are a cybersecurity analyst working at a financial institution. An unusual pattern of financial transactions was detected, suggesting potential fraud or money laundering. What specific type of threat intelligence would you rely on to analyze these financial activities and identify potential risks?",
+    "options": [
+      {
+        "id": "A",
+        "en": "TECHINT",
+        "zh": "技術情報（TECHINT）"
+      },
+      {
+        "id": "B",
+        "en": "CHIS",
+        "zh": "秘密人力情報來源（CHIS）"
+      },
+      {
+        "id": "C",
+        "en": "SOCINT",
+        "zh": "社會情報（SOCINT）"
+      },
+      {
+        "id": "D",
+        "en": "FININT",
+        "zh": "金融情報（FININT）"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "你是金融機構的資安分析師，發現異常金融交易模式，疑似涉及詐欺或洗錢。應依賴哪一種威脅情資來分析這些金融活動並識別潛在風險？"
+  },
+  {
+    "id": 54,
+    "en": "Sean works as a threat intelligence analyst. He is assigned a project for information gathering on a client’s network to find a potential threat. He started analysis and was trying to find out the company’s internal URLs, looking for any information about the different departments and business units. He was unable to find any information. What should Sean do to get the information he needs?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Sean should use online services such as netcraft.com to find the company’s internal URLs",
+        "zh": "使用 netcraft.com 等線上服務尋找公司內部網址"
+      },
+      {
+        "id": "B",
+        "en": "Sean should use website mirroring tools such as HTTrack Web Site Copier to find the company’s internal URLs",
+        "zh": "使用 HTTrack Web Site Copier 等網站鏡像工具尋找公司內部網址"
+      },
+      {
+        "id": "C",
+        "en": "Sean should use e-mail tracking tools such as eMailTrackerPro to find the company’s internal URLs",
+        "zh": "使用 eMailTrackerPro 等電子郵件追蹤工具尋找公司內部網址"
+      },
+      {
+        "id": "D",
+        "en": "Sean should use WayBackMachine in Archive.org to find the company’s internal URLs",
+        "zh": "使用 Archive.org 的 Wayback Machine 尋找公司內部網址"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "題幹「internal URLs」的意思與所列工具能力的對應待核對。",
+    "lockOptions": false,
+    "zh": "威脅情資分析師 Sean 受命蒐集客戶網路資訊以找出潛在威脅。他想尋找公司內部網址，以及各部門與事業單位的資訊，卻未找到任何內容。應採取哪一項做法？"
+  },
+  {
+    "id": 55,
+    "en": "While monitoring network activities, an unusual surge in outbound traffic was noticed, and a potential security incident was suspected. In the context of incident responses, what is the initial stage at which you actively recognize and confirm the presence of an incident?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Eradication",
+        "zh": "根除"
+      },
+      {
+        "id": "B",
+        "en": "Containment",
+        "zh": "圍堵"
+      },
+      {
+        "id": "C",
+        "en": "Recovery",
+        "zh": "復原"
+      },
+      {
+        "id": "D",
+        "en": "Identification",
+        "zh": "識別"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "監控網路活動時，發現對外流量異常暴增，懷疑發生安全事件。在事件應變流程中，主動識別並確認事件存在的初始階段是哪一個？"
+  },
+  {
+    "id": 56,
+    "en": "Jack is a professional hacker who wants to perform remote exploitation on the target system of an organization. He established a two-way communication channel between the victim’s system and his server. He used encryption techniques to hide the presence of a communication channel on a victim’s system and further applied privilege escalation techniques to exploit the system. What phase of the cyber kill chain methodology is Jack currently in?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Weaponization",
+        "zh": "武器化"
+      },
+      {
+        "id": "B",
+        "en": "Reconnaissance",
+        "zh": "偵察"
+      },
+      {
+        "id": "C",
+        "en": "Command and control",
+        "zh": "命令與控制"
+      },
+      {
+        "id": "D",
+        "en": "Delivery",
+        "zh": "傳遞"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "專業駭客 Jack 想遠端利用組織目標系統的漏洞。他在受害系統與自己的伺服器之間建立雙向通訊管道，利用加密隱藏管道存在，並進一步使用權限提升技術利用該系統。目前處於 Cyber Kill Chain 的哪個階段？"
+  },
+  {
+    "id": 57,
+    "en": "Bob is a threat intelligence analyst in Global Technologies Inc. While extracting threat intelligence, he identified that the organization is vulnerable to various application threats that can be exploited by attackers. Which of the following are the possible application threats that have been identified by Bob?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Footprinting and spoofing",
+        "zh": "足跡蒐集與偽冒"
+      },
+      {
+        "id": "B",
+        "en": "Man-in-the-middle attack and physical security attack",
+        "zh": "中間人攻擊與實體安全攻擊"
+      },
+      {
+        "id": "C",
+        "en": "SQL injection and buffer overflow attack",
+        "zh": "SQL 注入與緩衝區溢位攻擊"
+      },
+      {
+        "id": "D",
+        "en": "DNS and ARP poisoning",
+        "zh": "DNS 與 ARP 毒化"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Global Technologies 的威脅情資分析師 Bob 發現組織容易遭受可被攻擊者利用的應用程式威脅。下列哪一組屬於應用程式威脅？"
+  },
+  {
+    "id": 58,
+    "en": "Marry wants to follow an iterative and incremental approach to prioritize requirements in order to protect the important assets of an organization against attacks. She wants to set the requirements based on the order of priority, where the most important requirement must be met before, for a greater chance of success. She wants to apply prioritization tasks, scenarios, use cases, tests, and so on. Which of the following methodologies should Marry use to prioritize the requirements?",
+    "options": [
+      {
+        "id": "A",
+        "en": "MoSCow",
+        "zh": "MoSCoW 優先排序法"
+      },
+      {
+        "id": "B",
+        "en": "Data sampling",
+        "zh": "資料抽樣"
+      },
+      {
+        "id": "C",
+        "en": "Fusion analysis",
+        "zh": "融合分析"
+      },
+      {
+        "id": "D",
+        "en": "Data visualization",
+        "zh": "資料視覺化"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Marry 想採取反覆迭代、逐步增量的方式，為保護重要資產的需求排定優先順序。她希望最重要的需求先被滿足，以提高成功機會，並將此方法用於任務、情境、使用案例與測試等。應使用哪一種方法？"
+  },
+  {
+    "id": 59,
+    "en": "A consortium was established in a collaborative effort to strengthen the cybersecurity posture of multiple organizations within an industry sector. The participating entities decided to adopt a threat intelligence exchange architecture in which all threat data is collected, analyzed, and disseminated through a single central hub. What type of threat intelligence exchange architecture was implemented in this scenario?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Hybrid exchange architecture",
+        "zh": "混合式交換架構"
+      },
+      {
+        "id": "B",
+        "en": "Federated exchange architecture",
+        "zh": "聯邦式交換架構"
+      },
+      {
+        "id": "C",
+        "en": "Decentralized exchange architecture",
+        "zh": "去中心化交換架構"
+      },
+      {
+        "id": "D",
+        "en": "Centralized exchange architecture",
+        "zh": "集中式交換架構"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "多個同產業組織成立聯盟以強化資安，決定採用一種情資交換架構：所有威脅資料都由單一中央樞紐蒐集、分析與傳遞。這是哪一種架構？"
+  },
+  {
+    "id": 60,
+    "en": "While analyzing a series of security incidents, you notice a pattern of attacks originating from specific geographical locations. To gain deeper insight into the spatial aspects of these threats, what contextualization method would you employ to understand the geographic origin and distribution of the attacks?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Policy context",
+        "zh": "政策脈絡"
+      },
+      {
+        "id": "B",
+        "en": "Historical context",
+        "zh": "歷史脈絡"
+      },
+      {
+        "id": "C",
+        "en": "Spatial context",
+        "zh": "空間脈絡"
+      },
+      {
+        "id": "D",
+        "en": "Temporal context",
+        "zh": "時間脈絡"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "分析一連串安全事件時，你發現攻擊似乎源自特定地理位置。為深入了解威脅的空間特性、地理來源與分布，應採用哪一種脈絡化方法？"
+  },
+  {
+    "id": 61,
+    "en": "Tech Knights Inc., a small-scale company, has decided to share the intelligence information with various organizations using a nonprofit association that provides a secure place to accumulate and share the information about the cyber threats in the industry, and it also provides an extended service of data analysis to the organizational network. Which of the following types of sharing organizations should Tech Knights Inc. use to share information?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Information sharing and analysis centers (ISACs)",
+        "zh": "資訊分享與分析中心（ISAC）"
+      },
+      {
+        "id": "B",
+        "en": "Trading partners",
+        "zh": "交易夥伴"
+      },
+      {
+        "id": "C",
+        "en": "Informal contacts",
+        "zh": "非正式聯繫對象"
+      },
+      {
+        "id": "D",
+        "en": "Commercial vendors",
+        "zh": "商業供應商"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "小型公司 Tech Knights 想透過非營利協會，與其他組織分享情資。該協會提供安全環境，彙整及分享產業網路威脅資訊，也提供組織網路資料分析等延伸服務。應使用哪一類分享組織？"
+  },
+  {
+    "id": 62,
+    "en": "The cybersecurity team seeks to enhance its threat hunting capabilities in a large enterprise. They plan to search systematically and proactively for adversaries within their networks. What types of threat hunting approaches are they most likely to adopt, involving predefined processes, methodologies, and frameworks for their investigation?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Situational threat hunting",
+        "zh": "情境式威脅獵捕"
+      },
+      {
+        "id": "B",
+        "en": "Structured threat hunting",
+        "zh": "結構化威脅獵捕"
+      },
+      {
+        "id": "C",
+        "en": "Unstructured threat hunting",
+        "zh": "非結構化威脅獵捕"
+      },
+      {
+        "id": "D",
+        "en": "Entity-driven threat hunting",
+        "zh": "實體驅動威脅獵捕"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "大型企業的資安團隊想強化威脅獵捕，計畫在網路中有系統、主動地搜尋對手，並使用預先定義的流程、方法與框架進行調查。這是哪一種威脅獵捕方式？"
+  },
+  {
+    "id": 63,
+    "en": "In which of the following phases of the threat intelligence lifecycle is raw data converted into meaningful information by highly trained professionals using sophisticated technology and tools?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Data collection",
+        "zh": "資料蒐集"
+      },
+      {
+        "id": "B",
+        "en": "Analysis and production",
+        "zh": "分析與產製"
+      },
+      {
+        "id": "C",
+        "en": "Processing and exploitation",
+        "zh": "處理與利用"
+      },
+      {
+        "id": "D",
+        "en": "Planning and direction",
+        "zh": "規劃與指導"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "在威脅情資生命週期的哪個階段，受過專業訓練的人員使用先進技術與工具，將原始資料轉換成有意義的資訊？"
+  },
+  {
+    "id": 64,
+    "en": "John, a threat intelligence analyst in Cybertech Company, was asked to obtain information that provides greater insight into the current cyber risks. To gather such information, John needs to find the answer of the following questions: • Why the organization might be attacked? • How the organization might be attacked? • Who might be the intruders? Identity the type of security testing John is going to perform.",
+    "options": [
+      {
+        "id": "A",
+        "en": "White box testing",
+        "zh": "白箱測試"
+      },
+      {
+        "id": "B",
+        "en": "Black box testing",
+        "zh": "黑箱測試"
+      },
+      {
+        "id": "C",
+        "en": "Intelligence-led security testing",
+        "zh": "情資導向安全測試"
+      },
+      {
+        "id": "D",
+        "en": "Performance testing",
+        "zh": "效能測試"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Cybertech 的威脅情資分析師 John 想取得深入了解當前網路風險的資訊，因此需要回答：組織為何可能遭到攻擊？可能如何遭到攻擊？入侵者可能是誰？他準備執行哪一種安全測試？"
+  },
+  {
+    "id": 65,
+    "en": "Which component of risk management involves evaluating and ranking risks based on their significance, allowing organizations to focus resources on addressing the most critical threats?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Risk identification",
+        "zh": "風險識別"
+      },
+      {
+        "id": "B",
+        "en": "Risk mitigation",
+        "zh": "風險緩解"
+      },
+      {
+        "id": "C",
+        "en": "Risk prioritization",
+        "zh": "風險優先排序"
+      },
+      {
+        "id": "D",
+        "en": "Risk assessment",
+        "zh": "風險評估"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "風險管理中的哪一個部分會依重要程度評估並排序風險，讓組織將資源集中於最關鍵的威脅？"
+  },
+  {
+    "id": 66,
+    "en": "CalSoft is a large-scale organization that wants to establish a certain level of trust before sharing intelligence within the organization. As various departments in the organization share information frequently, they decided to use different trust models for different departments. In addition, the organization acts as a provider of threat intelligence to all connected members and organizations. Which of the following organizational trust models should be used by CalSoft?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Mandated trust",
+        "zh": "強制信任"
+      },
+      {
+        "id": "B",
+        "en": "Hybrid trust",
+        "zh": "混合信任"
+      },
+      {
+        "id": "C",
+        "en": "Mediated trust",
+        "zh": "中介信任"
+      },
+      {
+        "id": "D",
+        "en": "Validated trust",
+        "zh": "驗證式信任"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "大型組織 CalSoft 想在內部分享情資前建立一定程度的信任。由於各部門經常交換資訊，因此決定對不同部門採用不同信任模型。此外，組織也向所有連結的成員與組織提供威脅情資。應採用哪一種組織信任模型？"
+  },
+  {
+    "id": 67,
+    "en": "Kira works as a security analyst in an organization. She was asked to define and set up the requirements before collecting threat intelligence information. The requirements should focus on what must be collected in order to fulfil production intelligence. Which of the following categories of threat intelligence requirements should Kira focus on?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Production requirements",
+        "zh": "產製需求"
+      },
+      {
+        "id": "B",
+        "en": "Business requirements",
+        "zh": "業務需求"
+      },
+      {
+        "id": "C",
+        "en": "Collection requirements",
+        "zh": "蒐集需求"
+      },
+      {
+        "id": "D",
+        "en": "Intelligence requirements",
+        "zh": "情報需求"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "資安分析師 Kira 被要求在蒐集威脅情資前，先定義並建立需求，重點在於為滿足情資產製，必須蒐集哪些內容。應聚焦哪一類需求？"
+  },
+  {
+    "id": 68,
+    "en": "Jacob, a professional hacker, created an exact replica of an online shopping website. He copied the entire contents of the original website onto the local system that enables him to create a dummy spam website for performing social engineering attacks over the employees. What type of technique did Jacob use for cloning the website?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Data sampling",
+        "zh": "資料抽樣"
+      },
+      {
+        "id": "B",
+        "en": "Social engineering",
+        "zh": "社交工程"
+      },
+      {
+        "id": "C",
+        "en": "Tailgating",
+        "zh": "尾隨進入"
+      },
+      {
+        "id": "D",
+        "en": "Website mirroring",
+        "zh": "網站鏡像"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "專業駭客 Jacob 複製購物網站的全部內容至本地系統，建立與原網站完全相同的假網站，以對員工進行社交工程攻擊。他使用哪一種網站複製技術？"
+  },
+  {
+    "id": 69,
+    "en": "John is a lead cybersecurity analyst preparing to gather threat intelligence for client organization. Arrange the following steps in the correct sequence, outlining the process that John would follow to plan an effective threat intelligence collection:\n1. Structuring/normalization\n2. Sharing information\n3. Data collection\n4. Storing and visualizing data",
+    "options": [
+      {
+        "id": "A",
+        "en": "3 –> 1 –> 4 –> 2",
+        "zh": "3→1→4→2"
+      },
+      {
+        "id": "B",
+        "en": "2 –> 1 –> 4 –> 3",
+        "zh": "2→1→4→3"
+      },
+      {
+        "id": "C",
+        "en": "1 –> 2 –> 3 –> 4",
+        "zh": "1→2→3→4"
+      },
+      {
+        "id": "D",
+        "en": "4 –> 3 –> 2 –> 1",
+        "zh": "4→3→2→1"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "資深資安分析師 John 正準備為客戶組織蒐集威脅情資。請將下列步驟排成有效情資蒐集流程的正確順序：\n1. 結構化／正規化\n2. 分享資訊\n3. 資料蒐集\n4. 儲存與視覺化資料"
+  },
+  {
+    "id": 70,
+    "en": "Henry, working as a threat analyst in an organization named MylesTech, wants to share gathered intelligence. He wants to share the intelligence with a broad range of communities that can be trusted more, but the sensitivity of information is less. Which of the following tiers of the sharing model must be employed by Henry?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Multitier",
+        "zh": "多層級"
+      },
+      {
+        "id": "B",
+        "en": "Private tier",
+        "zh": "私人層"
+      },
+      {
+        "id": "C",
+        "en": "Targeted tier",
+        "zh": "特定對象層"
+      },
+      {
+        "id": "D",
+        "en": "Public tier",
+        "zh": "公開層"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "MylesTech 的威脅分析師 Henry 想分享已蒐集的情資。資訊敏感度較低，他希望與較廣泛、可以進一步建立信任的社群分享。應採用分享模型的哪一層？"
+  },
+  {
+    "id": 71,
+    "en": "What term describes the trust establishment process, wherein the first organization relies on a body of evidence presented to the second organization, and the level of trust is contingent upon the degree and quality of evidence provided by the initiating organization?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Mandated trust",
+        "zh": "強制信任"
+      },
+      {
+        "id": "B",
+        "en": "Direct historical trust",
+        "zh": "直接歷史信任"
+      },
+      {
+        "id": "C",
+        "en": "Mediated trust",
+        "zh": "中介信任"
+      },
+      {
+        "id": "D",
+        "en": "Validated trust",
+        "zh": "驗證式信任"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "某種信任建立流程中，第一個組織依賴向第二個組織提出的一組證據，而信任程度取決於發起組織提供證據的程度與品質。這是哪一種信任？"
+  },
+  {
+    "id": 72,
+    "en": "Steve is working as an analyst for Highlanders & Co. While performing data analysis, he used a method in which he included a list of all activities required to complete the project, time, dependencies, and logical endpoints such as milestones to acquire information about the relationship between various activities and the period of the activities obtained. Which of the following data analysis methods was used by Steve?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Timeline analysis",
+        "zh": "時間軸分析"
+      },
+      {
+        "id": "B",
+        "en": "Analogy analysis",
+        "zh": "類比分析"
+      },
+      {
+        "id": "C",
+        "en": "Cone of plausibility",
+        "zh": "合理性錐體"
+      },
+      {
+        "id": "D",
+        "en": "Critical path analysis",
+        "zh": "關鍵路徑分析"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "Highlanders 的分析師 Steve 分析資料時，列出完成專案所需的所有活動、時間、相依性，以及里程碑等邏輯終點，用以了解各活動的關係與所需時間。他使用哪一種分析方法？"
+  },
+  {
+    "id": 73,
+    "en": "Organizations must choose a right threat intelligence platform to assess and leverage intelligence information, monitor multiple enforcement points, manage intelligence feeds, and select appropriate security for the digital assets. Which of the following key factors ensures that the TI platform offers a structured way to perform investigations on attacks by processing the threat intelligence and utilizing the internal security controls to automate the detection process?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Search",
+        "zh": "搜尋"
+      },
+      {
+        "id": "B",
+        "en": "Workflow",
+        "zh": "工作流程"
+      },
+      {
+        "id": "C",
+        "en": "Scoring",
+        "zh": "評分"
+      },
+      {
+        "id": "D",
+        "en": "Open",
+        "zh": "開放性"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "組織選擇威脅情資平台時，需要評估並運用情資、監控多個防護執行點、管理情資饋送，並為數位資產選擇適當防護。哪一項關鍵功能可透過處理情資與運用內部安全控制，自動化偵測，提供結構化的攻擊調查方式？"
+  },
+  {
+    "id": 74,
+    "en": "In which of the following levels of the threat hunting maturity model (HMM) does an organization use threat intelligence to search for anomalies in the network, follow the latest threat reports gathered from open and closed sources, and use open-source tools for analysis?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Level 2: Procedural",
+        "zh": "第 2 級：程序化"
+      },
+      {
+        "id": "B",
+        "en": "Level 4: Leading",
+        "zh": "第 4 級：領先"
+      },
+      {
+        "id": "C",
+        "en": "Level 3: Innovative",
+        "zh": "第 3 級：創新"
+      },
+      {
+        "id": "D",
+        "en": "Level 1: Minimal",
+        "zh": "第 1 級：最低程度"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "威脅獵捕成熟度模型（HMM）的哪個層級，會利用情資搜尋網路異常、追蹤開放及封閉來源的最新威脅報告，並使用開源工具分析？"
+  },
+  {
+    "id": 75,
+    "en": "Flora, a threat intelligence analyst at PanTech Cyber Solutions, is working on a threat intelligence program. She is trying to collect the company’s crucial information through online job sites. Which of the following information will Flora obtain through job sites?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Open ports and services",
+        "zh": "開放連接埠與服務"
+      },
+      {
+        "id": "B",
+        "en": "Hardware and software information, network-related information, and technologies used by the company",
+        "zh": "公司硬體、軟體、網路相關資訊與使用的技術"
+      },
+      {
+        "id": "C",
+        "en": "Employee details and social security numbers",
+        "zh": "員工詳細資料與社會安全號碼"
+      },
+      {
+        "id": "D",
+        "en": "Top-level domains and subdomains of the company",
+        "zh": "公司的頂級網域與子網域"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "PanTech Cyber Solutions 的威脅情資分析師 Flora 正透過線上求職網站蒐集公司的重要資訊。她可從求職網站取得哪一類資訊？"
+  },
+  {
+    "id": 76,
+    "en": "You are a Security Operations Center (SOC) analyst responsible for monitoring and safeguarding the organization’s network. During routine activities, identify a potential vulnerability that can expose critical systems to exploitation. In what specific aspects of cybersecurity would you actively engage in when addressing and mitigating this vulnerability?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Threat intelligence analysis",
+        "zh": "威脅情資分析"
+      },
+      {
+        "id": "B",
+        "en": "Vulnerability management",
+        "zh": "弱點管理"
+      },
+      {
+        "id": "C",
+        "en": "Security awareness training",
+        "zh": "資安意識訓練"
+      },
+      {
+        "id": "D",
+        "en": "Incident response",
+        "zh": "事件應變"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "你是 SOC 分析師，負責監控及保護組織網路。例行作業中發現一項可能使關鍵系統遭利用的漏洞。處理並降低此漏洞風險，屬於哪一項資安工作？"
+  },
+  {
+    "id": 77,
+    "en": "To extract useful intelligence from the gathered bulk data and to improve the efficiency of the composite bulk data, Sam, a threat analyst, follows a data analysis method where he creates a logical sequence of events based on the assumptions of an adversary’s proposed actions, mechanisms, indicators, and implications. To develop accurate predictions, he further takes into consideration the important factors including bad actors, methods, vulnerabilities, targets, and so on. Which of the following data analysis methods is used by Sam to extract useful intelligence out of bulk data?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Linchpin analysis",
+        "zh": "關鍵支點分析"
+      },
+      {
+        "id": "B",
+        "en": "Critical path analysis",
+        "zh": "關鍵路徑分析"
+      },
+      {
+        "id": "C",
+        "en": "Opportunity analysis",
+        "zh": "機會分析"
+      },
+      {
+        "id": "D",
+        "en": "Analogy analysis",
+        "zh": "類比分析"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "題幹描述與原始答案 Critical path analysis 的對應待核對。",
+    "lockOptions": false,
+    "zh": "威脅分析師 Sam 想從大量資料擷取有用情資並提升整合資料的效用。他根據對手可能的行動、機制、指標與影響建立邏輯事件順序，並考量惡意行為者、方法、漏洞與目標等因素，以形成準確預測。使用的是哪一種資料分析方法？"
+  },
+  {
+    "id": 78,
+    "en": "You are the leading cybersecurity analyst at financial institutions. An anomaly is detected in the network, suggesting a potential security threat. To proactively investigate and mitigate the risk, arrange the following steps in the correct sequence as part of the threat hunting process:\n1) Investigation\n2) Collect and process data\n3) Response\n4) Hypothesis\n5) Trigger\na) 5 –> 3 –> 1 –> 4 –> 2\nb) 3 –> 2 –> 5 –> 1 –> 4\nc) 4 –> 1 –> 3 –> 5 –> 2\nd) 4 –> 2 –> 5 –> 1 –> 3",
+    "options": [
+      {
+        "id": "A",
+        "en": "c",
+        "zh": "c（4→1→3→5→2）"
+      },
+      {
+        "id": "B",
+        "en": "d",
+        "zh": "d（4→2→5→1→3）"
+      },
+      {
+        "id": "C",
+        "en": "a",
+        "zh": "a（5→3→1→4→2）"
+      },
+      {
+        "id": "D",
+        "en": "b",
+        "zh": "b（3→2→5→1→4）"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "原題答案為 A（c）；獵捕步驟的先後順序疑有歧義，保留原始答案，待核對。",
+    "lockOptions": true,
+    "zh": "你是金融機構的資深資安分析師，網路中出現可能代表安全威脅的異常。為主動調查並降低風險，請將威脅獵捕流程排成正確順序：\n1）調查\n2）蒐集與處理資料\n3）應變\n4）假設\n5）觸發\na）5→3→1→4→2\nb）3→2→5→1→4\nc）4→1→3→5→2\nd）4→2→5→1→3"
+  },
+  {
+    "id": 79,
+    "en": "Jamie, an analyst, was asked to perform statistical data analysis process on the acquired data. While performing the analysis, he used conditional probability method so as to understand the data and build insights for response actions based on it. What stage of the statistical data analysis is Jamie currently in?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Data preparation",
+        "zh": "資料準備"
+      },
+      {
+        "id": "B",
+        "en": "Data correlation",
+        "zh": "資料關聯"
+      },
+      {
+        "id": "C",
+        "en": "Data validation",
+        "zh": "資料驗證"
+      },
+      {
+        "id": "D",
+        "en": "Data classification",
+        "zh": "資料分類"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "分析師 Jamie 被要求對取得的資料進行統計分析。他使用條件機率方法來理解資料，並產生可支援應變行動的洞見。目前處於統計資料分析的哪個階段？"
+  },
+  {
+    "id": 80,
+    "en": "Mario is working as an analyst in an XYZ organization in the United States. He has been asked to prepare a threat landscape report to provide in- depth awareness and greater insight into the threats his organization is facing. Which of the following details should she include to prepare a threat landscape report?",
+    "options": [
+      {
+        "id": "A",
+        "en": "History of an attack and location where it was performed",
+        "zh": "攻擊歷史與發生地點"
+      },
+      {
+        "id": "B",
+        "en": "Attacker’s motivation and intention behind the attack",
+        "zh": "攻擊者的動機與意圖"
+      },
+      {
+        "id": "C",
+        "en": "Attribution of an attack to specific threat actor or group",
+        "zh": "將攻擊歸因於特定威脅行為者或團體"
+      },
+      {
+        "id": "D",
+        "en": "A summary of threat actors most likely targeting the organization along with their motivations, intentions, and TTPs.",
+        "zh": "最可能鎖定組織的威脅行為者摘要，以及其動機、意圖與 TTPs"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "美國 XYZ 組織的分析師 Mario 被要求撰寫威脅態勢報告，深入說明組織所面臨的威脅。報告應包含下列哪一項內容？"
+  },
+  {
+    "id": 81,
+    "en": "Philip, a professional hacker, is planning to attack an organization. In order to collect information, he covertly collects information from the target person by maintaining a personal or other relationship with the target person. Which of the following intelligence sources is used by Philip to collect information about the target organization?",
+    "options": [
+      {
+        "id": "A",
+        "en": "SOCMINT",
+        "zh": "社群媒體情報（SOCMINT）"
+      },
+      {
+        "id": "B",
+        "en": "FLU",
+        "zh": "FLU（原文縮寫）"
+      },
+      {
+        "id": "C",
+        "en": "CHIS",
+        "zh": "秘密人力情報來源（CHIS）"
+      },
+      {
+        "id": "D",
+        "en": "MASINT",
+        "zh": "測量與特徵情報（MASINT）"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "駭客 Philip 計畫攻擊某組織。為蒐集資訊，他透過與目標人物維持私人或其他關係，秘密取得對方資訊。他使用哪一種情報來源？"
+  },
+  {
+    "id": 82,
+    "en": "As the CEO of a multinational corporation, you focus on making decisions that align with the organization’s long-term goals and overall business strategies. What type of threat intelligence would be most valuable in guiding your decisions to enhance a company’s resilience against emerging cyber threats?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Strategic threat intelligence",
+        "zh": "策略層級威脅情資"
+      },
+      {
+        "id": "B",
+        "en": "Tactical threat intelligence",
+        "zh": "戰術層級威脅情資"
+      },
+      {
+        "id": "C",
+        "en": "Technical threat intelligence",
+        "zh": "技術層級威脅情資"
+      },
+      {
+        "id": "D",
+        "en": "Operational threat intelligence",
+        "zh": "作業層級威脅情資"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "你是跨國企業執行長，著重符合長期目標與整體業務策略的決策。為提升公司面對新興網路威脅的韌性，哪一種情資最有助於決策？"
+  },
+  {
+    "id": 83,
+    "en": "Marie, a threat analyst at an organization named TechSavvy, was asked to perform operational threat intelligence analysis to get contextual information about security events and incidents. Which of the following sources does Marie need to use to perform operational threat intelligence analysis?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Attack group reports, attack campaign reports, incident reports, malware samples",
+        "zh": "攻擊團體報告、攻擊活動報告、事件報告、惡意程式樣本"
+      },
+      {
+        "id": "B",
+        "en": "Activity-related attacks, social media sources, chat room conversations",
+        "zh": "攻擊相關活動、社群媒體來源、聊天室對話"
+      },
+      {
+        "id": "C",
+        "en": "OSINT, security industry white papers, human contacts",
+        "zh": "開源情報、資安產業白皮書、人際聯繫"
+      },
+      {
+        "id": "D",
+        "en": "Malware indicators, network indicators, e-mail indicators",
+        "zh": "惡意程式指標、網路指標、電子郵件指標"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "TechSavvy 的威脅分析師 Marie 被要求進行作業層級威脅情資分析，以取得安全事件與事故的脈絡資訊。應使用哪一組來源？"
+  },
+  {
+    "id": 84,
+    "en": "Two cybersecurity teams from different organizations joined forces to combat a rapidly evolving malware campaign targeting their industry. They exchange real-time information about the attackers’ techniques, compromised systems, and immediate defensive actions. What type of threat intelligence sharing characterizes this collaboration?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Sharing technical threat intelligence",
+        "zh": "分享技術層級威脅情資"
+      },
+      {
+        "id": "B",
+        "en": "Sharing strategic threat intelligence",
+        "zh": "分享策略層級威脅情資"
+      },
+      {
+        "id": "C",
+        "en": "Sharing operational threat intelligence",
+        "zh": "分享作業層級威脅情資"
+      },
+      {
+        "id": "D",
+        "en": "Sharing tactical threat intelligence",
+        "zh": "分享戰術層級威脅情資"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "兩個不同組織的資安團隊共同對抗鎖定同產業、快速演變的惡意程式攻擊活動。他們即時交換攻擊者技術、受入侵系統與立即防禦措施等資訊。這是哪一種威脅情資分享？"
+  },
+  {
+    "id": 85,
+    "en": "An organization, namely, Highlander, Inc., decided to integrate threat intelligence into the incident response process for rapid detection and recovery from various security incidents. In which of the following phases of the incident response management does the organization utilize operational and tactical threat intelligence to provide context to the alerts generated by various security mechanisms?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Phase 2: event",
+        "zh": "階段 2：事件（event）"
+      },
+      {
+        "id": "B",
+        "en": "Phase 1: preplanning",
+        "zh": "階段 1：預先規劃（preplanning）"
+      },
+      {
+        "id": "C",
+        "en": "Phase 3: incident",
+        "zh": "階段 3：事故（incident）"
+      },
+      {
+        "id": "D",
+        "en": "Phase 4: breach",
+        "zh": "階段 4：侵害（breach）"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "題幹描述警示脈絡化，與原始答案 preplanning 的階段對應待核對。",
+    "lockOptions": false,
+    "zh": "Highlander 決定把威脅情資整合至事件應變流程，以快速偵測各種安全事件並復原。事件應變管理的哪一個階段，會使用作業與戰術情資，為各種安全機制產生的警示提供脈絡？"
+  },
+  {
+    "id": 86,
+    "en": "James, a senior threat intelligence officer, was tasked with assessing the success and failure of the threat intelligence program established by the organization. As part of the assessment, James reviewed the outcome of the intelligence program, determined if any improvements were required in the program, and identified the past learnings that can be applied to the future program. Identify the activity performed by James in the above scenario.",
+    "options": [
+      {
+        "id": "A",
+        "en": "Determine the costs and benefits associated with the program",
+        "zh": "評估計畫相關成本與效益"
+      },
+      {
+        "id": "B",
+        "en": "Determine the fulfillment of stakeholders",
+        "zh": "確認利害關係人需求的滿足程度"
+      },
+      {
+        "id": "C",
+        "en": "Report findings and recommendations",
+        "zh": "報告發現與建議"
+      },
+      {
+        "id": "D",
+        "en": "Conduct a gap analysis",
+        "zh": "執行差距分析"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "資深威脅情資主管 James 被要求評估組織情資計畫的成敗。他檢視計畫結果、判斷是否需要改善，並找出可運用於未來計畫的過往經驗。他正在執行哪一項活動？"
+  },
+  {
+    "id": 87,
+    "en": "A threat analyst working in XYZ Company was asked to perform threat intelligence analysis. During the information collection phase, he used a social engineering technique where he pretended to be a legitimate or authorized person. Using this technique, he gathered sensitive information by scanning terminals for passwords, searching important documents on the desks, rummaging bins, and so on. Which of the following social engineering techniques was used by the analyst for information collection?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Shoulder surfing",
+        "zh": "肩窺"
+      },
+      {
+        "id": "B",
+        "en": "Impersonation",
+        "zh": "冒充身分"
+      },
+      {
+        "id": "C",
+        "en": "Dumpster diving",
+        "zh": "垃圾桶翻找"
+      },
+      {
+        "id": "D",
+        "en": "Piggybacking",
+        "zh": "搭便車進入"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "XYZ 的威脅分析師在蒐集資訊時，假裝自己是合法或獲授權的人員，再透過查看終端機密碼、搜尋桌上重要文件及翻找垃圾桶等方式取得敏感資訊。這是哪一種社交工程技術？"
+  },
+  {
+    "id": 88,
+    "en": "An autonomous robot was deployed to navigate and learn about the environment. Through a trial-and-error process, the robot refines its actions based on positive or negative feedback to maximize cumulative rewards. What type of machine learning will the robot employ in this scenario?",
+    "options": [
+      {
+        "id": "A",
+        "en": "Unsupervised learning",
+        "zh": "非監督式學習"
+      },
+      {
+        "id": "B",
+        "en": "Semi-supervised learning",
+        "zh": "半監督式學習"
+      },
+      {
+        "id": "C",
+        "en": "Reinforcement learning",
+        "zh": "強化學習"
+      },
+      {
+        "id": "D",
+        "en": "Supervised learning",
+        "zh": "監督式學習"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "note": "",
+    "lockOptions": false,
+    "zh": "一台自主機器人被部署來探索並學習環境，透過反覆嘗試與錯誤，根據正面或負面回饋改善行動，以最大化累積獎勵。這屬於哪一種機器學習？"
+  }
+]
