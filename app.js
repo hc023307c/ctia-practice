@@ -73,7 +73,7 @@ window.addEventListener('hashchange',()=>render());
 window.addEventListener('visibilitychange',()=>{if(!document.hidden)expired();});
 window.addEventListener('storage',e=>{if(e.key!==KEY)return;const s=readStore(KEY);if(validSession(s,questions)){session=s;render(false);toast('已同步另一個分頁的測驗進度。');}});
 try{
- const response=await fetch('./questions.json');if(!response.ok)throw new Error('HTTP '+response.status);questions=await response.json();
+ const response=await fetch('./questions.json?v=20261026-explanations');if(!response.ok)throw new Error('HTTP '+response.status);questions=await response.json();
  const saved=readStore(KEY);if(validSession(saved,questions))session=saved;
  const pref=readStore(PREF);if(pref&&['english','bilingual'].includes(pref.language)&&typeof pref.range==='string')reading=pref;
  try{localStorage.setItem('ctia-storage-check','1');localStorage.removeItem('ctia-storage-check');}catch{storageOK=false;}
