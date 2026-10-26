@@ -19,3 +19,8 @@ test('multiple choice requires exact answer set',()=>{const q={answers:['A','C']
 test('timer uses absolute deadline across JSON reload',()=>{const s=makeSession(qs,{...config,minutes:'10'},1000);assert.equal(s.deadline,601000);const copy=JSON.parse(JSON.stringify(s));assert.ok(validSession(copy,qs));assert.deepEqual(copy,s);});
 test('bad count and duration rejected',()=>{for(const count of ['0','89','1.5','-1'])assert.throws(()=>makeSession(qs,{...config,count}));for(const minutes of ['-1','0.5','1441','foo'])assert.throws(()=>makeSession(qs,{...config,minutes}));});
 test('corrupted persisted state rejected',()=>{const s=makeSession(qs,config);assert.ok(!validSession({...s,version:'old'},qs));assert.ok(!validSession({...s,index:999},qs));const broken=structuredClone(s);broken.items[0].options=['A','A','B','C'];assert.ok(!validSession(broken,qs));});
+test('every question has distinct complete Chinese explanations with safe reference links',()=>{
+ const reasons=new Set();
+ for(const q of qs){const e=q.explanation;assert.ok(e&&e.reason.length>30&&e.distractors.length>20&&e.takeaway.length>10,`Question ${q.id}`);reasons.add(e.reason);assert.ok(Array.isArray(e.references));for(const r of e.references){assert.ok(r.label);assert.equal(new URL(r.url).protocol,'https:');}}
+ assert.equal(reasons.size,88);
+});

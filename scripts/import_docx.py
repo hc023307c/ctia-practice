@@ -19,14 +19,15 @@ for m in re.finditer(r'QUESTION\s+(\d+)\s*\n(.*?)(?=\nQUESTION\s+\d+|\Z)',source
     if not options:raise ValueError(f'Missing options: {n}')
     previous=old.get(n,{})
     english=content[:options[0].start()].strip()
-    unchanged=previous.get('en')==english and [(o['id'],o['en']) for o in previous.get('options',[])]==[(o[1],o[2].strip()) for o in options]
+    unchanged=previous.get('answers')==re.findall(r'[A-Z]',answer[1]) and previous.get('en')==english and [(o['id'],o['en']) for o in previous.get('options',[])]==[(o[1],o[2].strip()) for o in options]
     prevopts={o['id']:o for o in previous.get('options',[])}
     q={'id':n,'en':english,'zh':previous.get('zh','') if unchanged else '',
        'options':[{'id':o[1],'en':o[2].strip(),'zh':prevopts.get(o[1],{}).get('zh','') if unchanged else ''} for o in options],
        'answers':re.findall(r'[A-Z]',answer[1]),'note':previous.get('note','') if unchanged else '原文已變更，中文翻譯待更新。',
-       'lockOptions':previous.get('lockOptions',False)}
+       'lockOptions':previous.get('lockOptions',False),
+       'explanation':previous.get('explanation') if unchanged else None}
     assert set(q['answers'])<=set(o['id'] for o in q['options'])
     result.append(q)
 assert result and len(set(q['id'] for q in result))==len(result)
 (root/'questions.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-print(f'Imported {len(result)} questions. Run npm run check after completing translations.')
+print(f'Imported {len(result)} questions. Run npm run check after completing translations and explanations.')
