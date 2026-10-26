@@ -10,11 +10,12 @@ export function validateNote(note,allowedIds){
  let pointCount=0;
  for(const stroke of note.strokes){
   if(!stroke||!['pen','eraser'].includes(stroke.tool)||!INK_COLORS.includes(stroke.color)||!Number.isFinite(stroke.width)||stroke.width<1||stroke.width>50||!Array.isArray(stroke.points)||stroke.points.length<1||stroke.points.length>20000)throw new Error('筆畫格式不正確。');
+  if(stroke.surface!==undefined&&(stroke.surface!=='question'||typeof stroke.target!=='string'||!/^[-a-zA-Z0-9]{1,80}$/.test(stroke.target)))throw new Error('筆畫位置不正確。');
   pointCount+=stroke.points.length;
   for(const point of stroke.points)if(!Array.isArray(point)||point.length!==2||!point.every(n=>Number.isFinite(n)&&n>=0&&n<=1))throw new Error('筆畫座標不正確。');
  }
  if(pointCount>150000)throw new Error('單題筆記資料過大，請減少筆畫。');
- return {questionId:note.questionId,bank:NOTES_BANK,version:NOTES_VERSION,updatedAt:note.updatedAt,strokes:note.strokes.map(s=>({tool:s.tool,color:s.color,width:s.width,points:s.points.map(p=>[...p])}))};
+ return {questionId:note.questionId,bank:NOTES_BANK,version:NOTES_VERSION,updatedAt:note.updatedAt,strokes:note.strokes.map(s=>({...(s.surface?{surface:s.surface,target:s.target}:{}),tool:s.tool,color:s.color,width:s.width,points:s.points.map(p=>[...p])}))};
 }
 export function parseBackup(text,allowedIds){
  if(new TextEncoder().encode(text).length>MAX_BACKUP_BYTES)throw new Error('備份檔案超過 25 MB，無法匯入。');

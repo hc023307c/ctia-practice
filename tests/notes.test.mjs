@@ -24,3 +24,12 @@ test('coordinates remain equivalent after changing display size or orientation',
  assert.deepEqual(normalizedPoint(-1,1000,{left:0,top:0,width:200,height:128}),[0,1]);
 });
 test('eraser strokes remain editable vector operations across backups',()=>{const n=note(1);n.strokes.push({...stroke,tool:'eraser',width:24});assert.deepEqual(parseBackup(JSON.stringify(makeBackup([n],ids)),ids)[0].strokes,n.strokes);});
+
+test('question overlay anchors survive validation, export and import alongside legacy notes',()=>{
+ const n=note(1);n.strokes.push({...structuredClone(stroke),surface:'question',target:'question-en-0'});
+ const restored=parseBackup(JSON.stringify(makeBackup([n],ids)),ids)[0];
+ assert.deepEqual(restored,n);assert.equal(restored.strokes[0].surface,undefined);assert.equal(restored.strokes[1].target,'question-en-0');
+});
+test('invalid question overlay anchors are rejected before importing',()=>{
+ for(const patch of [{surface:'html',target:'question-en-0'},{surface:'question',target:'<script>'},{surface:'question',target:''},{surface:'question'}]){const n=note(1);Object.assign(n.strokes[0],patch);assert.throws(()=>validateNote(n,ids));}
+});
