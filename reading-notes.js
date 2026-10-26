@@ -1,11 +1,10 @@
-import {createStrokeScrollGuard} from './notes-input.js?v=20261026-ink-touch';
-import {blankNote,validateNote,parseBackup,makeBackup,normalizedPoint,drawStroke,INK_COLORS,MAX_BACKUP_BYTES} from './notes-data.js?v=20261026-ink-touch';
+import {createStrokeScrollGuard,createStrokeSampler} from './notes-input.js?v=20261026-ink-stability';
+import {blankNote,validateNote,parseBackup,makeBackup,drawStroke,INK_COLORS,MAX_BACKUP_BYTES} from './notes-data.js?v=20261026-ink-touch';
 import {createNotesStore} from './notes-store.js?v=20261026-ink-touch';
 export function createReadingNotes({root,questionIds,notify,confirmAction,closeTranslation}){
  const store=createNotesStore(),records=new Map(),dirty=new Set(),revisions=new Map(),errors=new Map(),editors=new Map(),expanded=new Set();
  let ready=false,storageError='',loadPromise,saveChain=Promise.resolve(),generation=0;
  const scrollGuard=createStrokeScrollGuard();
- document.addEventListener('touchmove',e=>{if(scrollGuard.active&&e.cancelable)e.preventDefault();},{passive:false});
  const allowed=()=>questionIds();
  function load(){
   if(loadPromise)return loadPromise;
@@ -37,13 +36,13 @@ export function createReadingNotes({root,questionIds,notify,confirmAction,closeT
  function makeEditor(id,slot){
   const card=slot.closest('.question'),content=card.querySelector('.note-content');
   const host=document.createElement('section');host.className='note-editor';host.setAttribute('aria-label',`第 ${id} 題手寫筆記`);
-  host.innerHTML=`<div class="note-toolbar" role="group" aria-label="筆記工具"><div class="note-tool-group"><button type="button" class="small active" data-tool="pen" aria-pressed="true">筆</button><button type="button" class="secondary small" data-tool="eraser" aria-pressed="false">橡皮擦</button><button type="button" class="secondary small" data-scroll aria-pressed="false">捲動</button></div><div class="note-tool-group note-colors" aria-label="筆色">${INK_COLORS.map((color,i)=>`<button type="button" class="note-color ${i===0?'active':''}" data-color="${color}" style="--ink:${color}" aria-label="${['紅色筆','藍色筆','深綠色筆'][i]}" aria-pressed="${i===0}"></button>`).join('')}</div><label class="note-width">粗細 <select aria-label="筆畫粗細"><option value="2">細</option><option value="4" selected>中</option><option value="8">粗</option></select></label><div class="note-tool-group"><button type="button" class="secondary small" data-undo>復原</button><button type="button" class="secondary small" data-redo>重做</button><button type="button" class="quiet small danger" data-clear>清空</button></div></div><div class="note-editor-footer"><span class="note-save-status" role="status"></span><span>畫線時頁面會固定；放開後可拖曳題卡外側捲動，或切換「捲動」。取消勾選可選字翻譯。</span></div>`;
+  host.innerHTML=`<div class="note-toolbar" role="group" aria-label="筆記工具"><div class="note-tool-group"><button type="button" class="small active" data-tool="pen" aria-pressed="true">筆</button><button type="button" class="secondary small" data-tool="eraser" aria-pressed="false">橡皮擦</button><button type="button" class="secondary small" data-scroll aria-pressed="false">捲動</button></div><div class="note-tool-group note-colors" aria-label="筆色">${INK_COLORS.map((color,i)=>`<button type="button" class="note-color ${i===0?'active':''}" data-color="${color}" style="--ink:${color}" aria-label="${['紅色筆','藍色筆','深綠色筆'][i]}" aria-pressed="${i===0}"></button>`).join('')}</div><label class="note-width">粗細 <select aria-label="筆畫粗細"><option value="2">細</option><option value="4" selected>中</option><option value="8">粗</option></select></label><div class="note-tool-group"><button type="button" class="secondary small" data-undo>復原</button><button type="button" class="secondary small" data-redo>重做</button><button type="button" class="quiet small danger" data-clear>清空</button></div></div><div class="note-editor-footer"><span class="note-save-status" role="status"></span><span>畫線時停用捲動；要移動頁面請拖曳題卡外側，或切換「捲動」。取消勾選可選字翻譯。</span></div>`;
   slot.append(host);
   const find=s=>host.querySelector(s),status=find('.note-save-status'),lifecycle=new AbortController(),surfaces=[];
   let canvas=null,ctx=null,activeTarget=null;
   const blocks=[...content.querySelectorAll('[data-ink-target]')];
   for(const block of blocks){const layer=document.createElement('canvas');layer.className='note-canvas note-overlay';layer.setAttribute('aria-label',`第 ${id} 題 ${block.dataset.inkTarget} 畫線區`);block.append(layer);surfaces.push({block,canvas:layer,ctx:layer.getContext('2d'),target:block.dataset.inkTarget});}
-  let releaseScroll=null;
+  let releaseScroll=null,sampler=null;
   let tool='pen',color=INK_COLORS[0],width=4,mode='write',activeStroke=null,pointerId=null,remainingPoints=150000,redo=[],undo=get(id).strokes.filter(s=>s.surface==='question').map(stroke=>({type:'stroke',stroke})),saveTimer,raf=0,destroyed=false;
   function redraw(){
    for(const surface of surfaces){
@@ -59,22 +58,30 @@ export function createReadingNotes({root,questionIds,notify,confirmAction,closeT
   function updateButtons(){find('[data-undo]').disabled=!undo.length;find('[data-redo]').disabled=!redo.length;find('[data-clear]').disabled=!get(id).strokes.some(s=>s.surface==='question');}
   function finish(){
    if(!activeStroke){releaseScroll?.();releaseScroll=null;return;}
-   get(id).strokes.push(activeStroke);undo.push({type:'stroke',stroke:activeStroke});activeStroke=null;redo=[];const oldPointer=pointerId;pointerId=null;try{if(oldPointer!==null&&canvas.hasPointerCapture(oldPointer))canvas.releasePointerCapture(oldPointer);}catch{}
+   get(id).strokes.push(activeStroke);undo.push({type:'stroke',stroke:activeStroke});activeStroke=null;sampler=null;redo=[];const oldPointer=pointerId;pointerId=null;try{if(oldPointer!==null&&canvas.hasPointerCapture(oldPointer))canvas.releasePointerCapture(oldPointer);}catch{}
    releaseScroll?.();releaseScroll=null;changed(id);clearTimeout(saveTimer);saveTimer=setTimeout(()=>save(id),200);redraw();
   }
-  function point(event){return normalizedPoint(event.clientX,event.clientY,canvas.getBoundingClientRect());}
   for(const surface of surfaces){
   surface.canvas.addEventListener('pointerdown',e=>{
-   if(mode!=='write'||!content.classList.contains('ink-writing')||scrollGuard.active||pointerId!==null||(e.pointerType==='mouse'&&e.button!==0))return;
+   if(mode!=='write'||!content.classList.contains('ink-writing')||e.isPrimary===false||scrollGuard.active||pointerId!==null||(e.pointerType==='mouse'&&e.button!==0))return;
    canvas=surface.canvas;ctx=surface.ctx;activeTarget=surface.target;if(!ctx)return;
    remainingPoints=150000-get(id).strokes.reduce((sum,s)=>sum+s.points.length,0);
    if(get(id).strokes.length>=5000||remainingPoints<1){notify('本題筆畫較多，請先匯出備份，再清理部分筆畫。');return;}
-   e.preventDefault();closeTranslation();releaseScroll=scrollGuard.lock();pointerId=e.pointerId;activeStroke={surface:'question',target:activeTarget,tool,color,width:tool==='eraser'?Math.max(18,width*4):width,points:[point(e)]};try{canvas.setPointerCapture(pointerId);}catch{}redraw();
+   sampler=createStrokeSampler(e,canvas.getBoundingClientRect());if(!sampler)return;
+   e.preventDefault();closeTranslation();releaseScroll=scrollGuard.lock();pointerId=e.pointerId;activeStroke={surface:'question',target:activeTarget,tool,color,width:tool==='eraser'?Math.max(18,width*4):width,points:[sampler.first]};try{canvas.setPointerCapture(pointerId);}catch{}redraw();
   },{signal:lifecycle.signal});
   surface.canvas.addEventListener('pointermove',e=>{
    if(e.pointerId!==pointerId||!activeStroke)return;e.preventDefault();
-   const events=typeof e.getCoalescedEvents==='function'?e.getCoalescedEvents():[];
-   for(const item of events.length?events:[e]){const p=point(item),last=activeStroke.points.at(-1);if(Math.hypot(p[0]-last[0],p[1]-last[1])>.0005)activeStroke.points.push(p);if(activeStroke.points.length>=Math.min(20000,remainingPoints)){finish();break;}}
+   if(e.pointerType==='mouse'&&e.buttons===0){finish();return;}
+   const rect=canvas.getBoundingClientRect();
+   // Use the dispatched event directly. Safari may return delayed coalesced points
+   // from a different viewport frame; those must never become connecting lines.
+   const result=sampler.sample(e,rect);
+   if(result.stop){finish();return;}if(result.skip)return;
+   const p=result.point,last=activeStroke.points.at(-1);
+   if(Math.hypot(p[0]-last[0],p[1]-last[1])>.0005)activeStroke.points.push(p);
+   if(activeStroke.points.length>=Math.min(20000,remainingPoints)){finish();return;}
+
    resize();
   },{signal:lifecycle.signal});
   for(const name of ['pointerup','pointercancel','lostpointercapture'])surface.canvas.addEventListener(name,e=>{if(e.pointerId===pointerId)finish();},{signal:lifecycle.signal});
@@ -83,6 +90,9 @@ export function createReadingNotes({root,questionIds,notify,confirmAction,closeT
   const preventWritingGesture=e=>{if(content.classList.contains('ink-writing')&&e.cancelable)e.preventDefault();};
   for(const name of ['touchstart','touchmove','contextmenu'])content.addEventListener(name,preventWritingGesture,{passive:false,signal:lifecycle.signal});
   window.addEventListener('blur',finish,{signal:lifecycle.signal});
+  for(const name of ['pointerup','pointercancel'])document.addEventListener(name,e=>{if(e.pointerId===pointerId)finish();},{signal:lifecycle.signal});
+  // A browser toolbar/zoom change ends the stroke before a new frame can be joined.
+  for(const name of ['scroll','resize'])window.visualViewport?.addEventListener(name,finish,{signal:lifecycle.signal});
   function setEnabled(enabled){finish();host.hidden=!enabled;slot.hidden=!enabled;content.classList.toggle('ink-writing',enabled&&mode==='write');closeTranslation();resize();}
   find('[data-scroll]').onclick=()=>{finish();mode=mode==='write'?'scroll':'write';content.classList.toggle('ink-writing',mode==='write');find('[data-scroll]').classList.toggle('active',mode==='scroll');find('[data-scroll]').setAttribute('aria-pressed',String(mode==='scroll'));find('[data-scroll]').textContent=mode==='scroll'?'返回書寫':'捲動';};
   host.querySelectorAll('[data-tool]').forEach(button=>button.onclick=()=>{finish();tool=button.dataset.tool;host.querySelectorAll('[data-tool]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});});

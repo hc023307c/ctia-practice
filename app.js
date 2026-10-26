@@ -1,5 +1,5 @@
 import {createMasteryStore,practiceIds,makePracticeSession} from './mastery.js?v=20261026-mastery';
-import {createReadingNotes} from './reading-notes.js?v=20261026-ink-touch';
+import {createReadingNotes} from './reading-notes.js?v=20261026-ink-stability';
 import {createReadingTranslator} from './reading-translation.js?v=20261026-select-translate';
 import {parseRange,isCorrect,grade,validSession} from './core.js';
 const $=s=>document.querySelector(s), app=$('#app'), KEY='ctia-practice-session', PREF='ctia-practice-reading';
