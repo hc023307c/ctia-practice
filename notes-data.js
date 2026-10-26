@@ -2,7 +2,7 @@ export const NOTES_BANK='ctia-88';
 export const NOTES_VERSION=1;
 export const CANVAS_WIDTH=1000;
 export const CANVAS_HEIGHT=640;
-export const INK_COLORS=['#174e48','#2459bc','#b14343'];
+export const INK_COLORS=['#b14343','#2459bc','#174e48'];
 export const MAX_BACKUP_BYTES=25*1024*1024;
 export function blankNote(questionId){return {questionId,bank:NOTES_BANK,version:NOTES_VERSION,updatedAt:Date.now(),strokes:[]};}
 export function validateNote(note,allowedIds){

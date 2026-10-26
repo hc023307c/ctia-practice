@@ -1,4 +1,4 @@
-import {createReadingNotes} from './reading-notes.js?v=20261026-overlay';
+import {createReadingNotes} from './reading-notes.js?v=20261026-ink-touch';
 import {createReadingTranslator} from './reading-translation.js?v=20261026-select-translate';
 import {VERSION,parseRange,makeSession,isCorrect,grade,validSession} from './core.js';
 const $=s=>document.querySelector(s), app=$('#app'), KEY='ctia-practice-session', PREF='ctia-practice-reading';
