@@ -1,10 +1,14 @@
+import {attachPortableUI} from './portable/runtime.js?v=20261028-mobile';
+import {parsePortableBackup,makePortableBackup} from './portable/backup.js?v=20261028-mobile';
+import {initializeOfflineApp} from './pwa.js?v=20261028-mobile';
 import {createMasteryStore,practiceIds,makePracticeSession} from './mastery.js?v=20261026-mastery';
-import {createReadingNotes} from './reading-notes.js?v=20261026-ink-stability';
+import {createReadingNotes} from './reading-notes.js?v=20261028-mobile';
 import {createReadingTranslator} from './reading-translation.js?v=20261026-speech';
 import {parseRange,isCorrect,grade,validSession} from './core.js';
 const $=s=>document.querySelector(s), app=$('#app'), KEY='ctia-practice-session', PREF='ctia-practice-reading';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let progressTools=null;
 let questions=[],session=null,reading={language:'bilingual',range:''}, storageOK=true,timer=null,reviewFilter='all';
 function readStore(key){try{return JSON.parse(localStorage.getItem(key));}catch{return null;}}
 function save(){try{if(session)localStorage.setItem(KEY,JSON.stringify(session));else localStorage.removeItem(KEY);}catch{storageOK=false;toast('瀏覽器無法儲存進度，關閉或重新整理可能遺失作答。');}}
@@ -125,5 +129,14 @@ try{
  const saved=readStore(KEY);if(validSession(saved,questions))session=saved;
  const pref=readStore(PREF);if(pref&&['english','bilingual'].includes(pref.language)&&typeof pref.range==='string')reading=pref;
  try{localStorage.setItem('ctia-storage-check','1');localStorage.removeItem('ctia-storage-check');}catch{storageOK=false;}
+ await readingNotes.initialize();
  render();
+ const progressRuntime={get status(){return {kvPersistent:storageOK,notesPersistent:readingNotes.canStore};}};
+ progressTools=attachPortableUI({runtime:progressRuntime,questions,parseBackup:parsePortableBackup,makeBackup:makePortableBackup,confirmAction,notify:toast,noticeText:'筆記、作答與已熟紀錄保存在目前裝置／瀏覽器。首次使用主畫面版時請確認紀錄；換裝置或更新前請備份。',flush:()=>readingNotes.flush(),getState:async()=>({state:{session,reading,readMastered:[...mastery.ids('read')],examMastered:[...mastery.ids('exam')],translationEnabled:readingTranslator.enabled()},notes:await readingNotes.getRecords()}),applyState:async data=>{
+  if(!storageOK)throw new Error('目前無法保存完整紀錄，請改用一般瀏覽模式再匯入。');
+  await readingNotes.replaceAllRecords(data.notes);readingTranslator.reset();session=data.state.session;reading=data.state.reading;
+  if(session)localStorage.setItem(KEY,JSON.stringify(session));else localStorage.removeItem(KEY);
+  saveReading();localStorage.setItem('ctia-mastery-read-v1',JSON.stringify({version:1,ids:data.state.readMastered}));localStorage.setItem('ctia-mastery-exam-v1',JSON.stringify({version:1,ids:data.state.examMastered}));readingTranslator.setEnabled(data.state.translationEnabled);lastRoute='';go('home');
+ }});
+ initializeOfflineApp({beforeUpdate:async()=>{await readingNotes.ensureSaved();if(!storageOK)throw new Error('測驗尚未保存。');}});
 }catch(err){app.innerHTML='<section class="card"><h1>題庫載入失敗</h1><p>請確認網路連線後重新整理頁面。</p><button id="reload">重新載入</button></section>';$('#reload').onclick=()=>location.reload();console.error(err);}

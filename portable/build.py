@@ -37,15 +37,7 @@ def build(output):
         if name=='app.js':
             source=re.sub(r" const response=await fetch\([^\n]+questions=await response.json\(\);", " questions=JSON.parse(document.querySelector('#portable-bank').textContent);", source)
             source=source.replace("storageOK?'重新整理後可繼續本次測驗。'", "(__portable.persistent&&storageOK)?'重新整理後可繼續本次測驗。'")
-            source=source.replace(" render();\n}catch(err)", ''' render();
- const {parsePortableBackup,makePortableBackup}=__modules['portable/backup.js'];
- __portableUI=__modules['portable/runtime.js'].attachPortableUI({runtime:__portable,questions,parseBackup:parsePortableBackup,makeBackup:makePortableBackup,confirmAction,notify:toast,flush:()=>readingNotes.flush(),getState:async()=>({state:{session,reading,readMastered:[...mastery.ids('read')],examMastered:[...mastery.ids('exam')],translationEnabled:readingTranslator.enabled()},notes:await __portable.notesStore.readAll()}),applyState:async data=>{
-  await readingNotes.replaceAllRecords(data.notes);readingTranslator.reset();session=data.state.session;reading=data.state.reading;
-  if(session)__portable.storage.setItem(KEY,JSON.stringify(session));else __portable.storage.removeItem(KEY);
-  saveReading();__portable.storage.setItem('ctia-mastery-read-v1',JSON.stringify({version:1,ids:data.state.readMastered}));__portable.storage.setItem('ctia-mastery-exam-v1',JSON.stringify({version:1,ids:data.state.examMastered}));readingTranslator.setEnabled(data.state.translationEnabled);lastRoute='';go('home');
- }});
- __portable.refresh();
-}catch(err)''')
+            source=source.replace('runtime:progressRuntime','runtime:__portable').replace('progressTools=attachPortableUI','__portableUI=progressTools=attachPortableUI')
             chunks.append('(async()=>{'+source+'\n})().catch(error=>console.error(error));')
         else:
             chunks.append('__modules['+json.dumps(name)+']=(function(){\n'+source+'\nreturn '+result+';})();')
@@ -57,6 +49,8 @@ def build(output):
     script=re.sub(r'</script',r'<\\/script',script,flags=re.I)
     bank=json.dumps(json.loads((ROOT/'questions.json').read_text()),ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
     html=(ROOT/'index.html').read_text()
+    html=re.sub(r'<section id="device-tools"[\s\S]*?</section>','',html)
+    html=re.sub(r'<link rel="(?:manifest|apple-touch-icon|icon)"[^>]*>','',html)
     html=re.sub(r'<link rel="stylesheet"[^>]+>',lambda _: '<style>'+ (ROOT/'styles.css').read_text()+'''\n.portable-controls{max-width:1088px;margin:0 auto 8px;padding:16px;background:#edf4e9;border:1px solid #dce4dc;border-radius:12px}.portable-controls h2{font-size:18px;margin:0 0 8px}.portable-controls p{font-size:12px;line-height:1.8;margin:6px 0}.portable-controls .actions{margin-top:10px}.portable-warning{color:#a34535;font-weight:700}@media(max-width:760px){.portable-controls{margin:0 16px 8px}}@media print{.portable-controls{display:none}}
 </style>''',html)
     banner='''<section class="portable-controls" aria-label="可攜版完整紀錄"><h2>CTIA 可攜版 · 2026-10-28</h2><p id="portable-status" role="status">請用可執行 JavaScript 的瀏覽器開啟；啟動後此處會顯示保存狀態。</p><p id="portable-notice">此檔案需用可執行 JavaScript 的瀏覽器開啟；檔案預覽器可能無法操作。</p><div class="actions"><button id="portable-export" type="button">匯出全部紀錄 ↓</button><button id="portable-import" type="button" class="secondary">匯入全部紀錄 ↑</button><input id="portable-file" type="file" accept=".json,application/json" hidden aria-label="選擇完整紀錄備份"></div><p>給別人：只傳此 HTML，個人紀錄不會附帶。換裝置：另帶完整紀錄 JSON 備份。舊手寫備份仍可由閱讀頁匯入。</p></section>'''

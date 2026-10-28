@@ -1,6 +1,6 @@
 import {createStrokeScrollGuard,createStrokeSampler} from './notes-input.js?v=20261026-ink-stability';
 import {blankNote,validateNote,parseBackup,makeBackup,drawStroke,INK_COLORS,MAX_BACKUP_BYTES} from './notes-data.js?v=20261026-ink-touch';
-import {createNotesStore} from './notes-store.js?v=20261026-ink-touch';
+import {createNotesStore} from './notes-store.js?v=20261028-mobile';
 export function createReadingNotes({root,questionIds,notify,confirmAction,closeTranslation}){
  const store=createNotesStore(),records=new Map(),dirty=new Set(),revisions=new Map(),errors=new Map(),editors=new Map(),expanded=new Set();
  let ready=false,storageError='',loadPromise,saveChain=Promise.resolve(),generation=0;
@@ -141,5 +141,5 @@ export function createReadingNotes({root,questionIds,notify,confirmAction,closeT
  }
  document.addEventListener('visibilitychange',()=>{if(document.hidden)flush();});
  window.addEventListener('pagehide',flush);
- return {mount,unmount,flush};
+ return {mount,unmount,flush,initialize:load,get canStore(){return ready&&errors.size===0;},async ensureSaved(){await flush();if(dirty.size)throw new Error('筆記尚未保存，請先匯出備份。');},async getRecords(){await load();await flush();if(!ready)throw new Error(storageError);return [...records.values()].map(note=>structuredClone(note));},async replaceAllRecords(notes){await load();if(!ready)throw new Error(storageError);await flush();unmount();await store.replaceAll(notes);records.clear();for(const note of notes)records.set(note.questionId,validateNote(note,allowed()));dirty.clear();errors.clear();revisions.clear();ready=true;storageError='';}};
 }

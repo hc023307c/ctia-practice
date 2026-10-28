@@ -13,5 +13,6 @@ export function createNotesStore(indexedDB=globalThis.indexedDB){
  }
  async function readAll(){const db=await open();return new Promise((resolve,reject)=>{const tx=db.transaction('notes','readonly'),request=tx.objectStore('notes').getAll();let rows=[];request.onsuccess=()=>rows=request.result;tx.oncomplete=()=>resolve(rows);tx.onabort=tx.onerror=()=>reject(tx.error||new Error('讀取筆記失敗。'));});}
  async function putMany(notes){const db=await open();return new Promise((resolve,reject)=>{const tx=db.transaction('notes','readwrite');tx.oncomplete=()=>resolve();tx.onabort=tx.onerror=()=>reject(tx.error||new Error('筆記未儲存，請匯出備份。'));try{for(const note of notes)tx.objectStore('notes').put(note);}catch(e){tx.abort();reject(e);}});}
- return {readAll,putMany};
+ async function replaceAll(notes){const db=await open();return new Promise((resolve,reject)=>{const tx=db.transaction('notes','readwrite'),store=tx.objectStore('notes');tx.oncomplete=()=>resolve();tx.onabort=tx.onerror=()=>reject(tx.error||new Error('筆記還原未完成。'));try{store.clear();for(const note of notes)store.put(note);}catch(error){tx.abort();reject(error);}});}
+ return {readAll,putMany,replaceAll};
 }

@@ -1,15 +1,17 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="CTIA 題庫"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><link rel="icon" type="image/png" href="icons/app-192.png">
 <meta name="theme-color" content="#174e48"><meta name="description" content="CTIA 題庫閱讀、中英對照與英文模擬測驗，支援選題與選項洗牌。">
-<title>CTIA 題庫練習</title><link rel="stylesheet" href="styles.css?v=20261026-speech">
+<title>CTIA 題庫練習</title><link rel="stylesheet" href="styles.css?v=20261028-mobile">
 </head>
 <body>
 <header class="site-header"><a class="brand" href="#home"><span class="brand-icon" aria-hidden="true">C</span><span>CTIA <strong>Study Lab</strong></span></a><nav aria-label="主要導覽"><a href="#read">閱讀題庫</a><a href="#setup">模擬測驗</a></nav></header>
+<section id="device-tools" class="device-tools" aria-label="離線與完整紀錄"><div class="device-status"><span id="pwa-status" role="status" data-state="loading">正在準備離線使用……</span><button id="pwa-update" class="secondary small" type="button" hidden>更新版本</button></div><details><summary>加入主畫面／完整紀錄備份</summary><p>iPhone／iPad：請用 Safari 開啟此網址，按「分享」→「加入主畫面」；若有「作為網頁 App 開啟」，請開啟。Android：使用瀏覽器選單的「安裝應用程式」或「加入主畫面」。</p><p>加入後請先在線上開啟一次，看到「離線準備完成」再離線使用。翻譯與外部參考仍需網路，朗讀依裝置語音。</p><div class="actions"><button id="pwa-install" class="secondary small" type="button" hidden>安裝到此裝置</button><button id="pwa-check" class="quiet small" type="button">檢查離線準備</button></div><p id="portable-status" role="status">正在檢查紀錄保存狀態……</p><p id="portable-notice"></p><div class="actions"><button id="portable-export" type="button" class="small">匯出全部紀錄 ↓</button><button id="portable-import" type="button" class="secondary small">匯入全部紀錄 ↑</button><input id="portable-file" type="file" accept=".json,application/json" hidden aria-label="選擇完整紀錄備份"></div></details></section>
 <main id="app"><p class="loading" role="status">正在載入題庫……</p></main>
 <footer><span>CTIA Study Lab</span><span>依上傳題庫練習 · 進度儲存於此瀏覽器</span><a href="https://github.com/hc023307c/ctia-practice" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer>
 <dialog id="confirm-dialog"><form method="dialog"><h2 id="confirm-title">確認交卷</h2><p id="confirm-text"></p><div class="actions"><button value="cancel" class="secondary">返回</button><button value="confirm">確認</button></div></form></dialog>
 <div id="toast" class="toast" role="status" hidden></div>
-<script type="module" src="app.js?v=20261026-review-bilingual"></script>
+<script type="module" src="app.js?v=20261028-mobile"></script>
 </body></html>
