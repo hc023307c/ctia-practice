@@ -1,5 +1,5 @@
 /* CTIA application shell only; personal records stay in localStorage / IndexedDB. */
-const CACHE_NAME='ctia-practice-shell-20261028-mobile-v1';
+const CACHE_NAME='ctia-practice-shell-20261028-mobile-v2';
 const ASSETS=['./','./index.html','./styles.css','./app.js','./core.js','./questions.json','./mastery.js','./reading-notes.js','./notes-store.js','./notes-data.js','./notes-input.js','./reading-translation.js','./translation-service.js','./reading-speech.js','./portable/runtime.js','./portable/backup.js','./pwa.js','./manifest.webmanifest','./icons/app-192.png','./icons/app-512.png','./icons/apple-touch-icon.png'];
 const root=new URL('./',self.location.href),assetURLs=ASSETS.map(path=>new URL(path,root).href),assetSet=new Set(assetURLs);
 self.addEventListener('install',event=>event.waitUntil((async()=>{
