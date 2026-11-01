@@ -25,11 +25,12 @@ test('every question has distinct complete Chinese explanations with safe refere
  assert.equal(reasons.size,88);
 });
 
-test('threat hunting sequence grades stem choice d through website option B',()=>{
+test('threat hunting sequence uses direct choices and grades D by identity',()=>{
  const q=qs.find(q=>q.id===78);
- assert.equal(q.options.find(o=>o.id==='B').en,'d');
- assert.deepEqual(q.answers,['B']);
+ assert.equal(q.options.find(o=>o.id==='D').en,'4 → 2 → 5 → 1 → 3');
+ assert.ok(!q.en.includes('a)'));assert.ok(!q.zh.includes('a）'));
+ assert.deepEqual(q.answers,['D']);
  const s=makeSession(qs,{...config,range:'78',shuffleOptions:true},100,()=>0);
- s.answers[78]=['B'];assert.equal(grade(s,qs).score,100);
+ s.answers[78]=['D'];assert.equal(grade(s,qs).score,100);
  s.answers[78]=['A'];assert.equal(grade(s,qs).score,0);
 });

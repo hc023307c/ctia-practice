@@ -3022,39 +3022,39 @@
   },
   {
     "id": 78,
-    "en": "You are the leading cybersecurity analyst at financial institutions. An anomaly is detected in the network, suggesting a potential security threat. To proactively investigate and mitigate the risk, arrange the following steps in the correct sequence as part of the threat hunting process:\n1) Investigation\n2) Collect and process data\n3) Response\n4) Hypothesis\n5) Trigger\na) 5 –> 3 –> 1 –> 4 –> 2\nb) 3 –> 2 –> 5 –> 1 –> 4\nc) 4 –> 1 –> 3 –> 5 –> 2\nd) 4 –> 2 –> 5 –> 1 –> 3",
+    "en": "You are the leading cybersecurity analyst at financial institutions. An anomaly is detected in the network, suggesting a potential security threat. To proactively investigate and mitigate the risk, arrange the following steps in the correct sequence as part of the threat hunting process:\n1) Investigation\n2) Collect and process data\n3) Response\n4) Hypothesis\n5) Trigger",
     "options": [
       {
         "id": "A",
-        "en": "c",
-        "zh": "c（4→1→3→5→2）"
+        "en": "5 → 3 → 1 → 4 → 2",
+        "zh": "5 → 3 → 1 → 4 → 2"
       },
       {
         "id": "B",
-        "en": "d",
-        "zh": "d（4→2→5→1→3）"
+        "en": "3 → 2 → 5 → 1 → 4",
+        "zh": "3 → 2 → 5 → 1 → 4"
       },
       {
         "id": "C",
-        "en": "a",
-        "zh": "a（5→3→1→4→2）"
+        "en": "4 → 1 → 3 → 5 → 2",
+        "zh": "4 → 1 → 3 → 5 → 2"
       },
       {
         "id": "D",
-        "en": "b",
-        "zh": "b（3→2→5→1→4）"
+        "en": "4 → 2 → 5 → 1 → 3",
+        "zh": "4 → 2 → 5 → 1 → 3"
       }
     ],
     "answers": [
-      "B"
+      "D"
     ],
     "note": "",
     "lockOptions": true,
-    "zh": "你是金融機構的資深資安分析師，網路中出現可能代表安全威脅的異常。為主動調查並降低風險，請將威脅獵捕流程排成正確順序：\n1）調查\n2）蒐集與處理資料\n3）應變\n4）假設\n5）觸發\na）5→3→1→4→2\nb）3→2→5→1→4\nc）4→1→3→5→2\nd）4→2→5→1→3",
+    "zh": "你是金融機構的資深資安分析師，網路中出現可能代表安全威脅的異常。為主動調查並降低風險，請將威脅獵捕流程排成正確順序：\n1）調查\n2）蒐集與處理資料\n3）應變\n4）假設\n5）觸發",
     "explanation": {
-      "reason": "正確答案為網站選項 B，對應題幹小寫 d：4→2→5→1→3，也就是假設→蒐集與處理資料→辨識觸發線索→調查→應變。先提出可驗證的攻擊假設，再蒐集與分析資料，從中辨識值得深入調查的線索，確認威脅後採取應變措施。",
-      "distractors": "A 對應 c（4→1→3→5→2），把資料蒐集放在調查與應變之後；C 對應 a、D 對應 b，皆過早進行應變。本題採假設先行的五步驟模型，Trigger 指資料分析後找到的調查線索；其他模型可能把觸發事件放在流程起點。",
-      "takeaway": "記憶順序：先假設、找資料、抓線索、查清楚、再處理。注意兩層代號：題幹 d＝網站 B，順序為 4→2→5→1→3。",
+      "reason": "正確答案為 D：4→2→5→1→3，也就是假設→蒐集與處理資料→辨識觸發線索→調查→應變。先提出可驗證的攻擊假設，再蒐集與分析資料，從中辨識值得深入調查的線索，確認威脅後採取應變措施。",
+      "distractors": "A（5→3→1→4→2）與 B（3→2→5→1→4）皆過早進行應變；C（4→1→3→5→2）把資料蒐集放在調查與應變之後。本題採假設先行的五步驟模型，Trigger 指資料分析後找到的調查線索；其他模型可能把觸發事件放在流程起點。",
+      "takeaway": "記憶順序：先假設、找資料、抓線索、查清楚、再處理。正確順序為 4→2→5→1→3，對應選項 D。",
       "references": [
         {
           "label": "Microsoft Security：威脅獵捕五步驟（Steps and implementation）",
