@@ -138,3 +138,11 @@ API 規格：https://mymemory.translated.net/doc/spec.php
 - 快取與儲存不能保證永不被系統回收，也不等於跨裝置同步。選字翻譯和外部參考需網路，朗讀依裝置聲音。
 
 測試涵蓋離線無網路時的 HTML／模組／題庫快取回應、版本字串處理、安裝失敗、快取修復、更新等待及保持非本應用資料。實際 iPhone／iPad 主畫面安裝與飛航模式仍須實機確認。未繞過瀏覽器安全限制模擬裝置。
+
+### Persistent exam weak-question marks
+
+During an exam or review, select `☆ 不熟／需加強` to save a question in the device's weak-question list. These marks use original question IDs and remain separate from reading/exam mastery and the session-only `稍後作答` flags. They never change the running session's answers, grading, or timer.
+
+In exam setup, select `只練不熟題`. The range is intersected with the current weak-question list before sampling or shuffling. This explicit mode includes marked questions even if they were also mastered. Unmark questions in exam/review or the setup management list. Completed-exam review offers `只看不熟題` with bilingual explanations.
+
+Full JSON backups include `state.examWeak` and the optional `session.config.onlyWeak`. Older backups without weak marks remain accepted and restore an empty weak list. Marks remain local to this device/browser unless exported and imported.

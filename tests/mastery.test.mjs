@@ -33,3 +33,18 @@ test('all mastered range and insufficient eligible count are explicit errors; in
 test('wrong-question retry respects latest mastery and does not silently include other questions',()=>{
  const retry=makePracticeSession(qs,{...config,range:'2,5,8',count:''},new Set([2,5]));assert.deepEqual(retry.items.map(i=>i.id),[8]);assert.deepEqual(retry.config.range,'2,5,8');
 });
+
+test('weak marks persist by original ID independently of mastery and never change answers or deadlines',()=>{
+ const disk=storage(),m=storeFor(disk),s=makePracticeSession(qs,config,new Set(),1000,()=>0),before=structuredClone(s);
+ m.set('read',2,true);m.set('exam',2,true);assert.ok(m.set('weak',2,true));m.set('weak',4,true);
+ assert.deepEqual([...storeFor(disk).ids('weak')],[2,4]);assert.deepEqual(s,before);
+ m.set('weak',2,false);assert.ok(m.ids('read').has(2));assert.ok(m.ids('exam').has(2));assert.deepEqual([...m.ids('weak')],[4]);
+});
+test('weak-only exam intersects range before sampling, includes marked mastered items, and retries latest marks',()=>{
+ const weak=new Set([2,4,7]),c={...config,onlyWeak:true,count:'2'},s=makePracticeSession(qs,c,new Set([2,4]),1000,()=>0,weak);
+ assert.deepEqual(new Set(s.items.map(i=>i.id)),new Set([2,4]));assert.deepEqual(s.config,c);assert.equal(s.deadline,601000);assert.ok(validSession(s,qs));
+ weak.delete(2);weak.add(5);const retry=makePracticeSession(qs,c,new Set([4,5]),2000,()=>0,weak);assert.deepEqual(new Set(retry.items.map(i=>i.id)),new Set([4,5]));
+ assert.throws(()=>makePracticeSession(qs,{...c,range:'8-10'},new Set(),1000,()=>0,weak),/沒有不熟題/);
+ assert.throws(()=>makePracticeSession(qs,{...c,count:'4'},new Set(),1000,()=>0,weak),/1～2/);
+ const normal=makePracticeSession(qs,{...c,count:'',onlyWeak:false},new Set([2]),1000,()=>0,weak);assert.deepEqual(new Set(normal.items.map(i=>i.id)),new Set([1,3,4,5]));
+});

@@ -33,7 +33,7 @@ export function attachPortableUI({runtime,flush,getState,applyState,questions,pa
  exportButton.onclick=()=>run(async()=>{await flush();const {state,notes}=await getState();const backup=makeBackup(state,notes,questions);const blob=new Blob([JSON.stringify(backup)],{type:'application/json'}),url=URL.createObjectURL(blob),link=doc.createElement('a');link.href=url;link.download=`CTIA_all_records_${new Date().toISOString().slice(0,10)}.json`;doc.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);notify('已匯出全部紀錄，請妥善保存下載的 JSON 備份檔。');});
  importButton.onclick=()=>input.click();
  input.onchange=()=>{const file=input.files?.[0];input.value='';if(!file)return;run(async()=>{if(file.size>25*1024*1024)throw Error('備份超過 25 MB，無法匯入。');const data=parseBackup(await file.text(),questions);
-  if(!await confirmAction('匯入全部紀錄',`備份含 ${data.notes.length} 題筆記、閱讀已熟 ${data.state.readMastered.length} 題、考試已熟 ${data.state.examMastered.length} 題${data.state.session?'，以及一份測驗紀錄':''}。將取代目前筆記、兩套已熟紀錄、測驗與設定。請先匯出目前紀錄。確定匯入？`))return;
+  if(!await confirmAction('匯入全部紀錄',`備份含 ${data.notes.length} 題筆記、閱讀已熟 ${data.state.readMastered.length} 題、考試已熟 ${data.state.examMastered.length} 題、不熟 ${data.state.examWeak.length} 題${data.state.session?'，以及一份測驗紀錄':''}。將取代目前筆記、兩套已熟紀錄、不熟標記、測驗與設定。請先匯出目前紀錄。確定匯入？`))return;
   await flush();await applyState(data);notify('完整紀錄已還原。計時測驗依原截止時間繼續，不會重置時間。');
  });};
  refresh();return {refresh};

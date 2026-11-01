@@ -7,7 +7,7 @@ import {makeSession,grade} from '../core.js';
 import {blankNote} from '../notes-data.js';
 const qs=JSON.parse(fs.readFileSync(new URL('../questions.json',import.meta.url))),config={range:'1-3',count:'',minutes:'10',shuffleQuestions:true,shuffleOptions:true};
 function disk(){const map=new Map();return {map,getItem:k=>map.get(k)??null,setItem:(k,v)=>map.set(k,String(v)),removeItem:k=>map.delete(k)};}
-const state=()=>({session:makeSession(qs,config,1000,()=>.25),reading:{language:'bilingual',range:'1-20'},readMastered:[1],examMastered:[2],translationEnabled:true});
+const state=()=>({session:makeSession(qs,config,1000,()=>.25),reading:{language:'bilingual',range:'1-20'},readMastered:[1],examMastered:[2],examWeak:[],translationEnabled:true});
 const note=()=>({...blankNote(1),strokes:[{surface:'question',target:'question-en-0',tool:'pen',color:'#b14343',width:4,points:[[.1,.2],[.3,.4]]}]});
 test('full backup retains shuffled options, answers, score, deadlines, notes and independent mastery/settings',()=>{
  const s=state();s.session.answers[1]=['D'];const backup=makePortableBackup(s,[note()],qs),parsed=parsePortableBackup(JSON.stringify(backup),qs);assert.deepEqual(parsed,backup);assert.deepEqual(parsed.state,s);assert.equal(parsed.state.session.deadline,601000);assert.deepEqual(grade(parsed.state.session,qs),grade(s.session,qs));assert.deepEqual(parsed.notes,[note()].map(n=>({...n,updatedAt:parsed.notes[0].updatedAt})));
@@ -32,4 +32,12 @@ test('quota failure keeps latest changes exportable and marks persistence unavai
 test('persistent adapter observes external storage writes and does not clear unrelated records',async()=>{
  const backend=disk(),runtime=createPortableRuntime({getStorage:()=>backend});backend.setItem('key','one');assert.equal(runtime.storage.getItem('key'),'one');backend.setItem('key','two');assert.equal(runtime.storage.getItem('key'),'two');backend.setItem('unrelated','keep');runtime.storage.removeItem('key');assert.equal(backend.getItem('unrelated'),'keep');
  let rows=[];const store=runtime.wrapNotesStore(()=>({readAll:async()=>rows,putMany:async n=>rows=n,replaceAll:async n=>rows=n}));await store.readAll();await store.replaceAll([note()]);assert.equal(runtime.persistent,true);assert.equal(rows.length,1);
+});
+
+test('weak marks and weak-only config round trip, legacy backups default to empty, malformed marks reject import',()=>{
+ const s=state();s.examWeak=[1,3];s.session.config.onlyWeak=true;const b=makePortableBackup(s,[],qs);
+ assert.deepEqual(parsePortableBackup(JSON.stringify(b),qs).state.examWeak,[1,3]);assert.equal(b.state.session.config.onlyWeak,true);
+ const legacy=structuredClone(b);delete legacy.state.examWeak;assert.deepEqual(parsePortableBackup(JSON.stringify(legacy),qs).state.examWeak,[]);
+ for(const invalid of [[1,1],[89],['2'],null]){const broken=structuredClone(b);broken.state.examWeak=invalid;assert.throws(()=>parsePortableBackup(JSON.stringify(broken),qs));}
+ const invalid=structuredClone(b);invalid.state.session.config.onlyWeak='true';assert.throws(()=>parsePortableBackup(JSON.stringify(invalid),qs));
 });
