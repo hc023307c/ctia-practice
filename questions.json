@@ -151,20 +151,21 @@
     "answers": [
       "A"
     ],
-    "note": "原題使用特定搜尋服務的運算子；實際功能及題意適用性待核對。",
+    "note": "本題使用已停用的搜尋運算子，A 僅作歷史題計分；找相關網站不等同確認偽冒網站。",
     "lockOptions": false,
     "zh": "InfoTec 公司的威脅情資分析師 Moses 想透過進階 Google 搜尋運算子，尋找組織可能面臨威脅的重要資訊。他想確認是否有與組織網址相似的假網站。應使用下列哪一個 Google 搜尋查詢？",
     "explanation": {
-      "reason": "原題答案 A 是依舊式搜尋運算子的用途：related: 曾用來找相關網站。但 Google 已在 2023 年停止支援 related:；而「相關網站」也不等於「偽冒網站」。因此這是過時且題意不夠精確的題目，網站保留 A 作為原題計分答案。",
-      "distractors": "info:、link:、cache: 分別是舊式網站資訊、連結或快取用途，不能當成可靠的偽冒網站偵測方法；cache: 也已不再受 Google 搜尋支援。",
-      "takeaway": "應區分「記住原題答案」與「實務仍可使用的功能」，不要把 related: 當成現行偽冒網站驗證工具。",
+      "reason": "本題作為歷史題，維持 A：related: 計分。該運算子曾用於尋找相關網站，但 Google 已於 2023 年公告不再支援；即使在可使用時，相關性也不能證明網站是偽冒網站。此答案不可當作現行操作建議。",
+      "distractors": "info:、link:、cache: 是題庫列出的舊式資訊、連結或快取用途，均不能可靠判定偽冒網站。Google 於 2024 年也公告 cache: 不再運作。若要調查偽冒，應另行驗證網域、內容與組織關聯。",
+      "takeaway": "歷史題記 A；現行實務不要使用 related: 驗證偽冒網站。相關網站、相似網域與惡意偽冒是不同概念。",
       "references": [
         {
-          "label": "Google：搜尋功能與運算子更新紀錄",
+          "label": "Google Search Central：搜尋運算子停用公告（2023／2024）",
           "url": "https://developers.google.com/search/updates"
         }
       ]
-    }
+    },
+    "noteType": "歷史題"
   },
   {
     "id": 5,
@@ -318,15 +319,16 @@
     "answers": [
       "C"
     ],
-    "note": "原始選項 A、B 的英文用詞相近且 B 語意不明；保留原文與答案，待核對。",
+    "note": "題幹未明確交代尚未掌握哪些威脅細節；B「Unknowns unknown」疑似誤植。原文與 C 計分暫保留。",
     "lockOptions": false,
     "zh": "TechTop 的威脅分析師 Michael 被要求執行網路威脅情資分析。取得威脅相關資訊後，他開始分析資訊並了解威脅性質。目前處於網路威脅情資的哪一種狀態？",
     "explanation": {
-      "reason": "原題答案 C 將此情境視為 Known unknowns：已知道有某個威脅或問題，但細節仍待分析釐清。僅「正在分析」不足以嚴格判斷知識狀態，故這是依原題意圖解讀。",
-      "distractors": "A Unknown unknowns 是連問題存在都尚未察覺；D Known knowns 是已掌握的事實；B Unknowns unknown 文法與語意不明，不能當成可靠的標準分類。",
-      "takeaway": "已知的未知＝知道缺口在哪裡，接下來要蒐證補足。",
+      "reason": "本題暫依原題選 C：Known unknowns。若情境是已知道威脅存在，但尚未掌握其性質或細節，便屬「已知的未知」。不過原文只說開始分析及理解，沒有明確說明哪些事項仍未知，因此 C 是依出題意圖的解讀。",
+      "distractors": "A 的 Unknown unknowns 指連未知問題的存在都尚未察覺；D 的 Known knowns 指已掌握的事實；B 的 Unknowns unknown 語意不明且與 A 過於接近，疑似誤植，尚未取得原文勘誤前保留。",
+      "takeaway": "知道自己缺少什麼資訊＝已知的未知。僅「開始分析」不足以嚴格判定知識狀態，勿把分析流程階段與知識分類混用。",
       "references": []
-    }
+    },
+    "noteType": "題意不清"
   },
   {
     "id": 9,
@@ -470,15 +472,16 @@
     "answers": [
       "D"
     ],
-    "note": "原題證據提供方與使用方的描述有歧義；保留原文與答案。",
+    "note": "英文原文對證據提供方及使用方的敘述不一致；中文已依「信任方評估對方提供的證據」釐清角色，英文保留，答案維持 D。",
     "lockOptions": false,
-    "zh": "Andrews and Sons 決定與合作夥伴分享威脅資訊。威脅分析師 Garry 被要求採用建立夥伴間信任的模型。在該模型中，第一個組織利用第二個組織的一組證據，而雙方的信任程度取決於第一個組織提供證據的程度與品質。這是哪一種信任模型？",
+    "zh": "Andrews and Sons 決定與合作夥伴分享威脅資訊。分析師 Garry 採用一種信任模型：甲組織根據乙組織提供的一組證據，評估對乙組織的信任程度，且信任程度取決於該證據的充分性與品質。這是哪一種信任模型？",
     "explanation": {
-      "reason": "Validated trust 是根據可檢驗的證據或保證來建立信任，信任程度受證據品質影響，因此原題選 D。題幹對第一、第二組織的角色描述混亂，但「以證據驗證」是主要辨識點。",
-      "distractors": "A 中介信任依賴雙方信任的第三方；B 強制信任依權威命令；C 直接歷史信任依過往互動經驗，均非本題強調的證據驗證。",
-      "takeaway": "證據驗證＝Validated；第三方背書＝Mediated；權威要求＝Mandated。",
+      "reason": "正確答案維持 D：Validated trust（驗證式信任）。甲組織根據乙組織提出、可供檢驗的證據評估對乙的信任，證據越充分且品質越高，越能支持該信任判斷。英文原文的組織角色表達混亂，中文已釐清證據的提供與使用關係。",
+      "distractors": "Mediated trust 依賴雙方信任的第三方；Mandated trust 依權威或制度要求；Direct historical trust 依過往直接互動經驗。本題強調證據及其品質，應選 Validated trust。",
+      "takeaway": "Validated＝依證據驗證；Mediated＝透過第三方；Historical＝根據互動歷史。信任方使用證據，被評估方提供證據。",
       "references": []
-    }
+    },
+    "noteType": "題意不清"
   },
   {
     "id": 13,
@@ -627,14 +630,19 @@
     "answers": [
       "C"
     ],
-    "note": "題幹的「多次嘗試」與答案「Attack origination points」的對應待核對。",
+    "note": "",
     "lockOptions": false,
     "zh": "下列哪一項 APT 特性，指的是攻擊者為進入目標網路而進行的多次嘗試？",
     "explanation": {
-      "reason": "原題指定 C，但「多次嘗試進入」本身無法充分推出 Attack origination points（攻擊來源起點）。來源起點通常是在描述從何處發起攻擊；本題沒有清楚交代來源，不能替原答案建立確定的推論。",
-      "distractors": "A 是願意承受的風險程度；B 是時間相關特性；D 是攻擊分成多個階段，亦不等於單純重試。現有敘述不足以毫無疑義地選出一項。",
-      "takeaway": "這題保留原答案供練習，但應回查教材定義，不要把「多次嘗試＝攻擊來源起點」當成通則。",
-      "references": []
+      "reason": "正確答案為 C：Attack origination points。本題使用 APT 特徵分類中的特定名稱；Cimcor 在同名特徵下說明，攻擊者可能多次嘗試取得網路初始進入點，並事先研究漏洞及把關人員，因此題幹的 numerous attempts 對應此項。",
+      "distractors": "A 的 Risk tolerance 關注攻擊者承受風險與避免偵測的程度；B 的 Timeliness 關注探查及維持存取所投入的時間；D 的 Multiphased 指偵察、進入、探索、蒐集與外洩等多個階段，並非單指多次嘗試進入。",
+      "takeaway": "在本題採用的 APT 特徵分類中，多次嘗試取得初始進入點對應 Attack origination points；多階段則描述整體攻擊流程。",
+      "references": [
+        {
+          "label": "Cimcor：APT 特徵第 7 項 Attack Origination Points",
+          "url": "https://www.cimcor.com/blog/14-telltale-characteristics-of-an-advanced-persistent-threat"
+        }
+      ]
     }
   },
   {
@@ -2116,15 +2124,25 @@
     "answers": [
       "A"
     ],
-    "note": "題幹「internal URLs」的意思與所列工具能力的對應待核對。",
+    "note": "internal URLs 可能指站內連結或內網網址；兩者工具需求不同。目前保留原題 A 計分，不能解讀為公開服務能保證取得內網資訊。",
     "lockOptions": false,
     "zh": "威脅情資分析師 Sean 受命蒐集客戶網路資訊以找出潛在威脅。他想尋找公司內部網址，以及各部門與事業單位的資訊，卻未找到任何內容。應採取哪一項做法？",
     "explanation": {
-      "reason": "原題指定 A（Netcraft），可依其網站與主機資訊調查的定位理解出題意圖。但公開服務無法保證取得真正的內網網址；若 internal URLs 指網站內部連結，題意又不同，因此不能把 A 當作充分證明。",
-      "distractors": "B 網站鏡像可蒐集可存取的網站內容與連結；C 郵件追蹤針對郵件相關資訊；D 網頁典藏可找歷史內容。應先釐清「內網網址」還是「站內網址」，才能判斷適用工具。",
-      "takeaway": "網站公開資訊、站內連結與不可公開存取的內網，是三種不同範圍。",
-      "references": []
-    }
+      "reason": "本題暫保留原題 A：Netcraft。Netcraft 的公開研究服務可調查網站技術與基礎設施資訊，但題幹沒有說清楚 internal URLs 是公開網站內部連結，還是無法公開存取的內網網址，因此不能宣告 A 必然滿足需求。",
+      "distractors": "若指可存取網站中的連結，B 的 HTTrack 網站鏡像有合理用途；若指歷史公開內容，D 的 Wayback Machine 可供調查；C 的郵件追蹤工具不直接解決此需求。上述公開工具均不能保證發現未公開、不可存取的內網網址。",
+      "takeaway": "先釐清範圍：網站公開基礎設施、站內連結、私人內網網址。範圍不同，工具與可取得資訊也不同；本題維持歧義標示。",
+      "references": [
+        {
+          "label": "Netcraft：研究工具與 Site Report 定位",
+          "url": "https://www.netcraft.com/resources/research-tools"
+        },
+        {
+          "label": "HTTrack：網站鏡像與連結結構",
+          "url": "https://www.httrack.com/html/"
+        }
+      ]
+    },
+    "noteType": "題意不清"
   },
   {
     "id": 55,
@@ -2777,15 +2795,16 @@
     "answers": [
       "D"
     ],
-    "note": "",
+    "note": "英文原文對證據提供方及使用方的敘述不一致；中文已依「信任方評估對方提供的證據」釐清角色，英文保留，答案維持 D。",
     "lockOptions": false,
-    "zh": "某種信任建立流程中，第一個組織依賴向第二個組織提出的一組證據，而信任程度取決於發起組織提供證據的程度與品質。這是哪一種信任？",
+    "zh": "哪一種信任建立方式，是由甲組織根據乙組織提供的一組證據，評估對乙組織的信任程度，且信任程度取決於該證據的充分性與品質？",
     "explanation": {
-      "reason": "以證據的程度與品質來建立信任，對應 Validated trust，故選 D。雖然原題對證據提供方的句子不夠清楚，但出題焦點是「驗證」。",
-      "distractors": "Mandated 依權威命令；Direct historical 依互動歷史；Mediated 依第三方保證。別把驗證證據誤當成只因相識很久而信任。",
-      "takeaway": "Validated＝有證據可檢驗；Historical＝有過往互動可參考。",
+      "reason": "本題以證據的充分性及品質作為信任判準，因此維持 D：Validated trust（驗證式信任）。信任方使用對方提供、可檢驗的證據作出判斷，不是憑權威要求或單純依賴交情。原文的證據提供與使用角色有混淆，中文已明確區分。",
+      "distractors": "Mediated trust 依賴雙方信任的第三方；Mandated trust 依權威或制度要求；Direct historical trust 依過往直接互動經驗。本題強調證據及其品質，應選 Validated trust。",
+      "takeaway": "Validated＝依證據驗證；Mediated＝透過第三方；Historical＝根據互動歷史。信任方使用證據，被評估方提供證據。",
       "references": []
-    }
+    },
+    "noteType": "題意不清"
   },
   {
     "id": 72,
@@ -2889,18 +2908,18 @@
       }
     ],
     "answers": [
-      "A"
+      "D"
     ],
-    "note": "原題答案 A（HMM2）與 HMM 原作者對 HMM1／HMM2 的辨識標準有歧義；保留原始答案，詳見中文解析。",
+    "note": "",
     "lockOptions": false,
     "zh": "威脅獵捕成熟度模型（HMM）的哪個層級，會利用情資搜尋網路異常、追蹤開放及封閉來源的最新威脅報告，並使用開源工具分析？",
     "explanation": {
-      "reason": "原題指定 A（HMM2 Procedural），但依 HMM 原作者的定義，追蹤開放與封閉威脅報告、利用既有指標搜尋，更接近 HMM1；HMM2 的主要辨識點是能執行他人建立的獵捕程序。題幹沒有充分呈現後者，因此應標為有歧義。",
-      "distractors": "B HMM4 強調成熟、自動化的能力；C HMM3 能發展自己的程序；D HMM1 在本題敘述下不能直接排除。不要用「有開源工具」作為 HMM2 的充分條件。",
-      "takeaway": "本網站仍以原題 A 計分；理解時區分 HMM1 的情資搜尋與 HMM2 的可重複程序。",
+      "reason": "正確答案為 D：Level 1 — Minimal。依 David Bianco 的原始 HMM，HMM1 會追蹤公開與非公開來源的最新威脅報告，從中擷取指標並搜尋組織資料。這與題幹利用威脅情資搜尋異常的敘述相符；僅使用開源分析工具不代表已達 HMM2。",
+      "distractors": "A 的 HMM2 Procedural 強調能定期執行他人建立的獵捕程序，題幹沒有描述這項能力；C 的 HMM3 Innovative 能建立自己的獵捕程序；B 的 HMM4 Leading 則將成熟且有效的獵捕流程自動化。",
+      "takeaway": "追蹤報告、擷取指標並搜尋＝HMM1；執行他人程序＝HMM2；建立自己的程序＝HMM3。工具是否開源不是分級標準。",
       "references": [
         {
-          "label": "David Bianco：HMM 原始模型與各層級定義",
+          "label": "David Bianco：HMM 原始模型（HMM1／HMM2）",
           "url": "https://detect-respond.blogspot.com/2015/10/a-simple-hunting-maturity-model.html"
         }
       ]
@@ -3010,15 +3029,25 @@
     "answers": [
       "B"
     ],
-    "note": "題幹描述與原始答案 Critical path analysis 的對應待核對。",
+    "note": "目前暫以原題 B 計分；A（Linchpin analysis）亦需回查 CTIA 教材原頁，尚未確認最終答案。",
     "lockOptions": false,
     "zh": "威脅分析師 Sam 想從大量資料擷取有用情資並提升整合資料的效用。他根據對手可能的行動、機制、指標與影響建立邏輯事件順序，並考量惡意行為者、方法、漏洞與目標等因素，以形成準確預測。使用的是哪一種資料分析方法？",
     "explanation": {
-      "reason": "原題指定 B，但題幹是在依攻擊者可能行動建立事件序列，沒有明確的工期、相依活動或最短完工路徑。因此與專案管理中的 Critical path analysis 對應不充分，應保留疑義，不宜硬說原答案必然正確。",
-      "distractors": "Linchpin analysis 檢查支撐推論的關鍵假設；Opportunity analysis 著重可能的行動機會；Analogy analysis 比較相似案例。題幹不足以清楚排除所有其他解讀。",
-      "takeaway": "把這題與第 72 題比較：第 72 題有工期與相依性，本題沒有，是需要回查教材的差異。",
-      "references": []
-    }
+      "reason": "本題答案尚待教材確認，目前暫保留原題 B：Critical path analysis 計分。題幹依攻擊者行動、機制、指標與影響等假設建立事件序列，但未清楚交代如何辨識關鍵路徑或檢驗支撐預測的關鍵假設，現有敘述不足以確定唯一答案。",
+      "distractors": "A 的 Linchpin analysis 著重辨識支撐判斷的關鍵假設，與題幹的假設及預測用語有關，值得回查教材。情報分析也有 Critical path 方法，不能只因題幹沒有工期就否定 B。C 的 Opportunity analysis 著重行動機會；D 的 Analogy analysis 著重相似案例比較。",
+      "takeaway": "目前勿把 B 當成已驗證答案，也勿直接認定 A 已證實；須回查教材對本題術語的定義。情報分析方法不一定完全等同專案管理中的同名方法。",
+      "references": [
+        {
+          "label": "IALEIA：Linchpin analysis 與關鍵假設",
+          "url": "https://www.ialeia.org/docs/vol22num01.pdf"
+        },
+        {
+          "label": "CIA：情報調查中的 Critical-Path 方法",
+          "url": "https://www.cia.gov/resources/csi/static/Application-of-Critical-Path-1.pdf"
+        }
+      ]
+    },
+    "noteType": "答案待確認"
   },
   {
     "id": 78,
