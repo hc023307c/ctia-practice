@@ -3337,16 +3337,21 @@
       }
     ],
     "answers": [
-      "B"
+      "A"
     ],
-    "note": "題幹描述警示脈絡化，與原始答案 preplanning 的階段對應待核對。",
+    "note": "",
     "lockOptions": false,
     "zh": "Highlander 決定把威脅情資整合至事件應變流程，以快速偵測各種安全事件並復原。事件應變管理的哪一個階段，會使用作業與戰術情資，為各種安全機制產生的警示提供脈絡？",
     "explanation": {
-      "reason": "原題指定 B（preplanning），但題幹說的是「為安全機制已產生的警示提供脈絡」，較像偵測、識別與分析時的工作。預先規劃可先安排情資來源與整合方式，卻不等同實際分析警示，故原答案有疑義。",
-      "distractors": "A event、C incident、D breach 的意義依題目採用的模型而定，不能直接換成另一套標準後宣告唯一正解。在未確認教材模型前，網站保留 B 計分。",
-      "takeaway": "準備整合能力與運用情資分析警示，是不同動作；不要為了背 B 混在一起。",
-      "references": []
+      "reason": "正確答案為 A：Phase 2 — Event（事件階段）。題幹關鍵是「為安全機制已產生的警示提供脈絡」。在此四階段模型中，作業與戰術威脅情資會補充警示相關的惡意程式、IP、網域、流量模式及攻擊者 TTP 等資訊，協助判斷是否為誤報，以及是否應升級為 Incident。",
+      "distractors": "B 的 Preplanning 是事前規劃、演練與準備應變流程；C 的 Incident 是事件已確認為攻擊者在環境中建立某種存在後的調查與處理；D 的 Breach 在此模型著重需向監管機關、客戶等對外通報的升級情境。題目描述的是分析警示，因此應選 Event。",
+      "takeaway": "看到「替告警提供情境、判斷誤報、決定是否升級」就對應 Phase 2：Event。Preplanning 則是事前準備。此題採四階段升級模型，不要混用其他事件應變生命週期。",
+      "references": [
+        {
+          "label": "Adam Meyer：情資支援事件應變（Phase 2: Event）",
+          "url": "https://www.securityweek.com/using-cyber-threat-intelligence-support-incident-response/"
+        }
+      ]
     }
   },
   {

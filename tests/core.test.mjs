@@ -34,3 +34,12 @@ test('threat hunting sequence uses direct choices and grades D by identity',()=>
  s.answers[78]=['D'];assert.equal(grade(s,qs).score,100);
  s.answers[78]=['A'];assert.equal(grade(s,qs).score,0);
 });
+
+test('alert contextualization grades Event as correct even when choices are shuffled',()=>{
+ const q=qs.find(q=>q.id===85);
+ assert.equal(q.options.find(o=>o.id==='A').en,'Phase 2: event');
+ const s=makeSession(qs,{...config,range:'85',shuffleOptions:true},100,()=>0);
+ assert.notEqual(s.items[0].options.indexOf('A'),0);
+ s.answers[85]=['A'];assert.equal(grade(s,qs).score,100);
+ s.answers[85]=['B'];assert.equal(grade(s,qs).score,0);
+});
